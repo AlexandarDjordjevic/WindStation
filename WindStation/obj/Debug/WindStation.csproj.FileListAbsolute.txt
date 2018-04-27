@@ -1,0 +1,10 @@
+D:\Radni\PC\C#\WindStation\WindStation\bin\Debug\WindStation.exe.config
+D:\Radni\PC\C#\WindStation\WindStation\bin\Debug\WindStation.exe
+D:\Radni\PC\C#\WindStation\WindStation\bin\Debug\WindStation.pdb
+D:\Radni\PC\C#\WindStation\WindStation\obj\Debug\WindStation.csprojResolveAssemblyReference.cache
+D:\Radni\PC\C#\WindStation\WindStation\obj\Debug\WindStation.Form1.resources
+D:\Radni\PC\C#\WindStation\WindStation\obj\Debug\WindStation.Properties.Resources.resources
+D:\Radni\PC\C#\WindStation\WindStation\obj\Debug\WindStation.csproj.GenerateResource.Cache
+D:\Radni\PC\C#\WindStation\WindStation\obj\Debug\WindStation.csproj.CoreCompileInputs.cache
+D:\Radni\PC\C#\WindStation\WindStation\obj\Debug\WindStation.exe
+D:\Radni\PC\C#\WindStation\WindStation\obj\Debug\WindStation.pdb
