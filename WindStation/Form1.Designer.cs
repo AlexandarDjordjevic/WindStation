@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPortSettings = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -70,12 +70,90 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.numericRxChannelSelect = new System.Windows.Forms.NumericUpDown();
+            this.numericDCPumpSelsect = new System.Windows.Forms.NumericUpDown();
+            this.button35 = new System.Windows.Forms.Button();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.btnSetTOF0 = new System.Windows.Forms.Button();
+            this.numericTOF0 = new System.Windows.Forms.NumericUpDown();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.comboBoxFreqDivider = new System.Windows.Forms.ComboBox();
+            this.btnSetConfig0 = new System.Windows.Forms.Button();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.numNumOfTxInBurst = new System.Windows.Forms.NumericUpDown();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.btnSetErrorFlags = new System.Windows.Forms.Button();
+            this.checkedListBoxErrorFlags = new System.Windows.Forms.CheckedListBox();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.comboBoxNumOfMeasToAverageStw = new System.Windows.Forms.ComboBox();
+            this.btnSetConfig1 = new System.Windows.Forms.Button();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.numericNumOfExpReciEvent = new System.Windows.Forms.NumericUpDown();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.comboBoxTofTimeoutCtrl = new System.Windows.Forms.ComboBox();
+            this.comboBoxShortTOFBlankPeriod = new System.Windows.Forms.ComboBox();
+            this.btnSetTimeout = new System.Windows.Forms.Button();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.checkBoxForceShortTOF = new System.Windows.Forms.CheckBox();
+            this.checkBoxEchoTimeout = new System.Windows.Forms.CheckBox();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.button23 = new System.Windows.Forms.Button();
+            this.checkListBoxConfig4 = new System.Windows.Forms.CheckedListBox();
+            this.numericTxPhShiftPos = new System.Windows.Forms.NumericUpDown();
+            this.label48 = new System.Windows.Forms.Label();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.comboBoxPGAGain = new System.Windows.Forms.ComboBox();
+            this.btnSetTOF1 = new System.Windows.Forms.Button();
+            this.checkBoxLNAFb = new System.Windows.Forms.CheckBox();
+            this.checkBoxLnaCtrl = new System.Windows.Forms.CheckBox();
+            this.numericTimingReg = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxPgaCtrl = new System.Windows.Forms.CheckBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.comboBoxEchoQualThld = new System.Windows.Forms.ComboBox();
+            this.checkListBoxConfig3 = new System.Windows.Forms.CheckedListBox();
+            this.btnSetConfig3 = new System.Windows.Forms.Button();
+            this.label61 = new System.Windows.Forms.Label();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.comboBoxAutozeroPeriod = new System.Windows.Forms.ComboBox();
+            this.btnSetClockRate = new System.Windows.Forms.Button();
+            this.checkBoxClockDiv = new System.Windows.Forms.CheckBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.groupBox28 = new System.Windows.Forms.GroupBox();
+            this.btnSetConfig2 = new System.Windows.Forms.Button();
+            this.numericTOFMeasMode = new System.Windows.Forms.NumericUpDown();
+            this.checkListBoxConfig2 = new System.Windows.Forms.CheckedListBox();
+            this.label67 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPortSettings.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabSettings.SuspendLayout();
             this.tabMeasurements.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericRxChannelSelect)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericDCPumpSelsect)).BeginInit();
+            this.groupBox20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericTOF0)).BeginInit();
+            this.groupBox21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numNumOfTxInBurst)).BeginInit();
+            this.groupBox22.SuspendLayout();
+            this.groupBox23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericNumOfExpReciEvent)).BeginInit();
+            this.groupBox29.SuspendLayout();
+            this.groupBox24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericTxPhShiftPos)).BeginInit();
+            this.groupBox25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericTimingReg)).BeginInit();
+            this.groupBox26.SuspendLayout();
+            this.groupBox27.SuspendLayout();
+            this.groupBox28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericTOFMeasMode)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -84,11 +162,12 @@
             this.tabControl1.Controls.Add(this.tabSettings);
             this.tabControl1.Controls.Add(this.tabCalibration);
             this.tabControl1.Controls.Add(this.tabMeasurements);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(657, 298);
+            this.tabControl1.Size = new System.Drawing.Size(648, 338);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.Enter += new System.EventHandler(this.tabControl1_Enter);
@@ -104,7 +183,7 @@
             this.tabPortSettings.Location = new System.Drawing.Point(4, 22);
             this.tabPortSettings.Name = "tabPortSettings";
             this.tabPortSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPortSettings.Size = new System.Drawing.Size(649, 272);
+            this.tabPortSettings.Size = new System.Drawing.Size(640, 312);
             this.tabPortSettings.TabIndex = 0;
             this.tabPortSettings.Text = "Port Settings";
             this.tabPortSettings.UseVisualStyleBackColor = true;
@@ -228,7 +307,7 @@
             this.tabSettings.Controls.Add(this.button2);
             this.tabSettings.Location = new System.Drawing.Point(4, 22);
             this.tabSettings.Name = "tabSettings";
-            this.tabSettings.Size = new System.Drawing.Size(649, 272);
+            this.tabSettings.Size = new System.Drawing.Size(640, 312);
             this.tabSettings.TabIndex = 3;
             this.tabSettings.Text = "Sensor Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
@@ -302,7 +381,7 @@
             this.tabCalibration.Location = new System.Drawing.Point(4, 22);
             this.tabCalibration.Name = "tabCalibration";
             this.tabCalibration.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCalibration.Size = new System.Drawing.Size(649, 272);
+            this.tabCalibration.Size = new System.Drawing.Size(640, 312);
             this.tabCalibration.TabIndex = 1;
             this.tabCalibration.Text = "Sensor Calibration";
             this.tabCalibration.UseVisualStyleBackColor = true;
@@ -327,7 +406,7 @@
             this.tabMeasurements.Location = new System.Drawing.Point(4, 22);
             this.tabMeasurements.Name = "tabMeasurements";
             this.tabMeasurements.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMeasurements.Size = new System.Drawing.Size(649, 272);
+            this.tabMeasurements.Size = new System.Drawing.Size(640, 312);
             this.tabMeasurements.TabIndex = 2;
             this.tabMeasurements.Text = "Measurements";
             this.tabMeasurements.UseVisualStyleBackColor = true;
@@ -354,31 +433,31 @@
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
             this.chart1.BorderlineColor = System.Drawing.Color.Black;
-            chartArea1.AxisX.Interval = 10D;
-            chartArea1.AxisX.Maximum = 60D;
-            chartArea1.AxisX.Minimum = 0D;
-            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisY.Maximum = 5D;
-            chartArea1.AxisY.Minimum = 0D;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.AutoFitMinFontSize = 6;
-            legend1.DockedToChartArea = "ChartArea1";
-            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
-            legend1.MaximumAutoSize = 10F;
-            legend1.Name = "Legend1";
-            legend1.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Tall;
-            legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea2.AxisX.Interval = 10D;
+            chartArea2.AxisX.Maximum = 60D;
+            chartArea2.AxisX.Minimum = 0D;
+            chartArea2.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea2.AxisY.Maximum = 5D;
+            chartArea2.AxisY.Minimum = 0D;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.AutoFitMinFontSize = 6;
+            legend2.DockedToChartArea = "ChartArea1";
+            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
+            legend2.MaximumAutoSize = 10F;
+            legend2.Name = "Legend1";
+            legend2.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Tall;
+            legend2.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(123, 8);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.MarkerSize = 3;
-            series1.Name = "Wind Speed";
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.MarkerSize = 3;
+            series2.Name = "Wind Speed";
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(518, 258);
             this.chart1.TabIndex = 22;
             this.chart1.Text = "chart1";
@@ -495,11 +574,701 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.numericRxChannelSelect);
+            this.tabPage1.Controls.Add(this.numericDCPumpSelsect);
+            this.tabPage1.Controls.Add(this.button35);
+            this.tabPage1.Controls.Add(this.groupBox20);
+            this.tabPage1.Controls.Add(this.groupBox21);
+            this.tabPage1.Controls.Add(this.groupBox22);
+            this.tabPage1.Controls.Add(this.groupBox23);
+            this.tabPage1.Controls.Add(this.groupBox29);
+            this.tabPage1.Controls.Add(this.groupBox24);
+            this.tabPage1.Controls.Add(this.groupBox25);
+            this.tabPage1.Controls.Add(this.groupBox26);
+            this.tabPage1.Controls.Add(this.groupBox27);
+            this.tabPage1.Controls.Add(this.groupBox28);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(640, 312);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // numericRxChannelSelect
+            // 
+            this.numericRxChannelSelect.Location = new System.Drawing.Point(138, 281);
+            this.numericRxChannelSelect.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericRxChannelSelect.Name = "numericRxChannelSelect";
+            this.numericRxChannelSelect.Size = new System.Drawing.Size(40, 20);
+            this.numericRxChannelSelect.TabIndex = 58;
+            // 
+            // numericDCPumpSelsect
+            // 
+            this.numericDCPumpSelsect.Location = new System.Drawing.Point(89, 281);
+            this.numericDCPumpSelsect.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericDCPumpSelsect.Name = "numericDCPumpSelsect";
+            this.numericDCPumpSelsect.Size = new System.Drawing.Size(40, 20);
+            this.numericDCPumpSelsect.TabIndex = 57;
+            // 
+            // button35
+            // 
+            this.button35.Location = new System.Drawing.Point(8, 281);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(75, 23);
+            this.button35.TabIndex = 56;
+            this.button35.Text = "Set channel";
+            this.button35.UseVisualStyleBackColor = true;
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox20.Controls.Add(this.btnSetTOF0);
+            this.groupBox20.Controls.Add(this.numericTOF0);
+            this.groupBox20.Location = new System.Drawing.Point(436, 99);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(197, 42);
+            this.groupBox20.TabIndex = 54;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "TOF 0";
+            // 
+            // btnSetTOF0
+            // 
+            this.btnSetTOF0.Location = new System.Drawing.Point(142, 10);
+            this.btnSetTOF0.Name = "btnSetTOF0";
+            this.btnSetTOF0.Size = new System.Drawing.Size(52, 26);
+            this.btnSetTOF0.TabIndex = 40;
+            this.btnSetTOF0.Text = "Set";
+            this.btnSetTOF0.UseVisualStyleBackColor = true;
+            // 
+            // numericTOF0
+            // 
+            this.numericTOF0.Location = new System.Drawing.Point(6, 15);
+            this.numericTOF0.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.numericTOF0.Name = "numericTOF0";
+            this.numericTOF0.Size = new System.Drawing.Size(52, 20);
+            this.numericTOF0.TabIndex = 19;
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.comboBoxFreqDivider);
+            this.groupBox21.Controls.Add(this.btnSetConfig0);
+            this.groupBox21.Controls.Add(this.label35);
+            this.groupBox21.Controls.Add(this.label37);
+            this.groupBox21.Controls.Add(this.numNumOfTxInBurst);
+            this.groupBox21.Location = new System.Drawing.Point(8, 6);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(143, 91);
+            this.groupBox21.TabIndex = 47;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Config 0";
+            // 
+            // comboBoxFreqDivider
+            // 
+            this.comboBoxFreqDivider.FormattingEnabled = true;
+            this.comboBoxFreqDivider.Items.AddRange(new object[] {
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "128",
+            "256"});
+            this.comboBoxFreqDivider.Location = new System.Drawing.Point(95, 11);
+            this.comboBoxFreqDivider.Name = "comboBoxFreqDivider";
+            this.comboBoxFreqDivider.Size = new System.Drawing.Size(39, 21);
+            this.comboBoxFreqDivider.TabIndex = 87;
+            // 
+            // btnSetConfig0
+            // 
+            this.btnSetConfig0.Location = new System.Drawing.Point(78, 64);
+            this.btnSetConfig0.Name = "btnSetConfig0";
+            this.btnSetConfig0.Size = new System.Drawing.Size(56, 22);
+            this.btnSetConfig0.TabIndex = 35;
+            this.btnSetConfig0.Text = "Set";
+            this.btnSetConfig0.UseVisualStyleBackColor = true;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(6, 40);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(84, 13);
+            this.label35.TabIndex = 5;
+            this.label35.Text = "Num Tx in burst:";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(6, 16);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(63, 13);
+            this.label37.TabIndex = 4;
+            this.label37.Text = "Freq div Tx:";
+            // 
+            // numNumOfTxInBurst
+            // 
+            this.numNumOfTxInBurst.Location = new System.Drawing.Point(94, 38);
+            this.numNumOfTxInBurst.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            this.numNumOfTxInBurst.Name = "numNumOfTxInBurst";
+            this.numNumOfTxInBurst.Size = new System.Drawing.Size(40, 20);
+            this.numNumOfTxInBurst.TabIndex = 2;
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.btnSetErrorFlags);
+            this.groupBox22.Controls.Add(this.checkedListBoxErrorFlags);
+            this.groupBox22.Location = new System.Drawing.Point(296, 209);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(134, 96);
+            this.groupBox22.TabIndex = 53;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Error flags";
+            // 
+            // btnSetErrorFlags
+            // 
+            this.btnSetErrorFlags.Location = new System.Drawing.Point(68, 67);
+            this.btnSetErrorFlags.Name = "btnSetErrorFlags";
+            this.btnSetErrorFlags.Size = new System.Drawing.Size(56, 22);
+            this.btnSetErrorFlags.TabIndex = 95;
+            this.btnSetErrorFlags.Text = "Set";
+            this.btnSetErrorFlags.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBoxErrorFlags
+            // 
+            this.checkedListBoxErrorFlags.FormattingEnabled = true;
+            this.checkedListBoxErrorFlags.Items.AddRange(new object[] {
+            "Err sig weak",
+            "Err no signal",
+            "Err sig high"});
+            this.checkedListBoxErrorFlags.Location = new System.Drawing.Point(5, 15);
+            this.checkedListBoxErrorFlags.Name = "checkedListBoxErrorFlags";
+            this.checkedListBoxErrorFlags.Size = new System.Drawing.Size(121, 49);
+            this.checkedListBoxErrorFlags.TabIndex = 94;
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.Controls.Add(this.comboBoxNumOfMeasToAverageStw);
+            this.groupBox23.Controls.Add(this.btnSetConfig1);
+            this.groupBox23.Controls.Add(this.label46);
+            this.groupBox23.Controls.Add(this.label47);
+            this.groupBox23.Controls.Add(this.numericNumOfExpReciEvent);
+            this.groupBox23.Location = new System.Drawing.Point(158, 5);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(273, 92);
+            this.groupBox23.TabIndex = 48;
+            this.groupBox23.TabStop = false;
+            this.groupBox23.Text = "Config 1";
+            // 
+            // comboBoxNumOfMeasToAverageStw
+            // 
+            this.comboBoxNumOfMeasToAverageStw.FormattingEnabled = true;
+            this.comboBoxNumOfMeasToAverageStw.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "128"});
+            this.comboBoxNumOfMeasToAverageStw.Location = new System.Drawing.Point(211, 13);
+            this.comboBoxNumOfMeasToAverageStw.Name = "comboBoxNumOfMeasToAverageStw";
+            this.comboBoxNumOfMeasToAverageStw.Size = new System.Drawing.Size(54, 21);
+            this.comboBoxNumOfMeasToAverageStw.TabIndex = 88;
+            // 
+            // btnSetConfig1
+            // 
+            this.btnSetConfig1.Location = new System.Drawing.Point(211, 62);
+            this.btnSetConfig1.Name = "btnSetConfig1";
+            this.btnSetConfig1.Size = new System.Drawing.Size(56, 22);
+            this.btnSetConfig1.TabIndex = 38;
+            this.btnSetConfig1.Text = "Set";
+            this.btnSetConfig1.UseVisualStyleBackColor = true;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(6, 40);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(179, 13);
+            this.label46.TabIndex = 5;
+            this.label46.Text = "Number of expected receive events:";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(6, 16);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(204, 13);
+            this.label47.TabIndex = 4;
+            this.label47.Text = "Number of meas to average in stopwatch:";
+            // 
+            // numericNumOfExpReciEvent
+            // 
+            this.numericNumOfExpReciEvent.Location = new System.Drawing.Point(211, 39);
+            this.numericNumOfExpReciEvent.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            this.numericNumOfExpReciEvent.Name = "numericNumOfExpReciEvent";
+            this.numericNumOfExpReciEvent.Size = new System.Drawing.Size(54, 20);
+            this.numericNumOfExpReciEvent.TabIndex = 2;
+            // 
+            // groupBox29
+            // 
+            this.groupBox29.Controls.Add(this.comboBoxTofTimeoutCtrl);
+            this.groupBox29.Controls.Add(this.comboBoxShortTOFBlankPeriod);
+            this.groupBox29.Controls.Add(this.btnSetTimeout);
+            this.groupBox29.Controls.Add(this.label70);
+            this.groupBox29.Controls.Add(this.label71);
+            this.groupBox29.Controls.Add(this.checkBoxForceShortTOF);
+            this.groupBox29.Controls.Add(this.checkBoxEchoTimeout);
+            this.groupBox29.Location = new System.Drawing.Point(437, 147);
+            this.groupBox29.Name = "groupBox29";
+            this.groupBox29.Size = new System.Drawing.Size(197, 84);
+            this.groupBox29.TabIndex = 52;
+            this.groupBox29.TabStop = false;
+            this.groupBox29.Text = "Timeout";
+            // 
+            // comboBoxTofTimeoutCtrl
+            // 
+            this.comboBoxTofTimeoutCtrl.FormattingEnabled = true;
+            this.comboBoxTofTimeoutCtrl.Items.AddRange(new object[] {
+            "128 ×T0",
+            "256 ×T0",
+            "512 ×T0",
+            "1024 ×T0"});
+            this.comboBoxTofTimeoutCtrl.Location = new System.Drawing.Point(91, 35);
+            this.comboBoxTofTimeoutCtrl.Name = "comboBoxTofTimeoutCtrl";
+            this.comboBoxTofTimeoutCtrl.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxTofTimeoutCtrl.TabIndex = 89;
+            // 
+            // comboBoxShortTOFBlankPeriod
+            // 
+            this.comboBoxShortTOFBlankPeriod.FormattingEnabled = true;
+            this.comboBoxShortTOFBlankPeriod.Items.AddRange(new object[] {
+            "8 ×T0",
+            "16 ×T0",
+            "32 ×T0",
+            "64 ×T0",
+            "128 ×T0",
+            "256 ×T0",
+            "512 ×T0",
+            "1024 ×T0"});
+            this.comboBoxShortTOFBlankPeriod.Location = new System.Drawing.Point(91, 11);
+            this.comboBoxShortTOFBlankPeriod.Name = "comboBoxShortTOFBlankPeriod";
+            this.comboBoxShortTOFBlankPeriod.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxShortTOFBlankPeriod.TabIndex = 88;
+            // 
+            // btnSetTimeout
+            // 
+            this.btnSetTimeout.Location = new System.Drawing.Point(152, 35);
+            this.btnSetTimeout.Name = "btnSetTimeout";
+            this.btnSetTimeout.Size = new System.Drawing.Size(41, 22);
+            this.btnSetTimeout.TabIndex = 45;
+            this.btnSetTimeout.Text = "Set";
+            this.btnSetTimeout.UseVisualStyleBackColor = true;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(2, 16);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(89, 13);
+            this.label70.TabIndex = 25;
+            this.label70.Text = "Short TOF b. per:";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(2, 38);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(85, 13);
+            this.label71.TabIndex = 23;
+            this.label71.Text = "TOF timeout ctrl:";
+            // 
+            // checkBoxForceShortTOF
+            // 
+            this.checkBoxForceShortTOF.AutoSize = true;
+            this.checkBoxForceShortTOF.Location = new System.Drawing.Point(90, 61);
+            this.checkBoxForceShortTOF.Name = "checkBoxForceShortTOF";
+            this.checkBoxForceShortTOF.Size = new System.Drawing.Size(103, 17);
+            this.checkBoxForceShortTOF.TabIndex = 17;
+            this.checkBoxForceShortTOF.Text = "Force short TOF";
+            this.checkBoxForceShortTOF.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEchoTimeout
+            // 
+            this.checkBoxEchoTimeout.AutoSize = true;
+            this.checkBoxEchoTimeout.Location = new System.Drawing.Point(6, 61);
+            this.checkBoxEchoTimeout.Name = "checkBoxEchoTimeout";
+            this.checkBoxEchoTimeout.Size = new System.Drawing.Size(72, 17);
+            this.checkBoxEchoTimeout.TabIndex = 21;
+            this.checkBoxEchoTimeout.Text = "Echo tout";
+            this.checkBoxEchoTimeout.UseVisualStyleBackColor = true;
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.Controls.Add(this.button23);
+            this.groupBox24.Controls.Add(this.checkListBoxConfig4);
+            this.groupBox24.Controls.Add(this.numericTxPhShiftPos);
+            this.groupBox24.Controls.Add(this.label48);
+            this.groupBox24.Location = new System.Drawing.Point(296, 99);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(133, 106);
+            this.groupBox24.TabIndex = 49;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Config 4";
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(68, 77);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(59, 22);
+            this.button23.TabIndex = 92;
+            this.button23.Text = "Set";
+            this.button23.UseVisualStyleBackColor = true;
+            // 
+            // checkListBoxConfig4
+            // 
+            this.checkListBoxConfig4.FormattingEnabled = true;
+            this.checkListBoxConfig4.Items.AddRange(new object[] {
+            "Receive mode",
+            "Trgi edge polarity"});
+            this.checkListBoxConfig4.Location = new System.Drawing.Point(6, 17);
+            this.checkListBoxConfig4.Name = "checkListBoxConfig4";
+            this.checkListBoxConfig4.Size = new System.Drawing.Size(120, 34);
+            this.checkListBoxConfig4.TabIndex = 92;
+            // 
+            // numericTxPhShiftPos
+            // 
+            this.numericTxPhShiftPos.Location = new System.Drawing.Point(86, 52);
+            this.numericTxPhShiftPos.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            this.numericTxPhShiftPos.Name = "numericTxPhShiftPos";
+            this.numericTxPhShiftPos.Size = new System.Drawing.Size(40, 20);
+            this.numericTxPhShiftPos.TabIndex = 19;
+            this.numericTxPhShiftPos.Value = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(6, 54);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(76, 13);
+            this.label48.TabIndex = 20;
+            this.label48.Text = "Tx ph shift pos";
+            // 
+            // groupBox25
+            // 
+            this.groupBox25.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox25.Controls.Add(this.comboBoxPGAGain);
+            this.groupBox25.Controls.Add(this.btnSetTOF1);
+            this.groupBox25.Controls.Add(this.checkBoxLNAFb);
+            this.groupBox25.Controls.Add(this.checkBoxLnaCtrl);
+            this.groupBox25.Controls.Add(this.numericTimingReg);
+            this.groupBox25.Controls.Add(this.checkBoxPgaCtrl);
+            this.groupBox25.Controls.Add(this.label57);
+            this.groupBox25.Controls.Add(this.label58);
+            this.groupBox25.Location = new System.Drawing.Point(436, 6);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(197, 91);
+            this.groupBox25.TabIndex = 46;
+            this.groupBox25.TabStop = false;
+            this.groupBox25.Text = "TOF 1";
+            // 
+            // comboBoxPGAGain
+            // 
+            this.comboBoxPGAGain.FormattingEnabled = true;
+            this.comboBoxPGAGain.Items.AddRange(new object[] {
+            "0 dB",
+            "3 dB",
+            "6 dB",
+            "9 dB",
+            "12 dB",
+            "15 dB",
+            "18 dB",
+            "21 dB"});
+            this.comboBoxPGAGain.Location = new System.Drawing.Point(84, 12);
+            this.comboBoxPGAGain.Name = "comboBoxPGAGain";
+            this.comboBoxPGAGain.Size = new System.Drawing.Size(51, 21);
+            this.comboBoxPGAGain.TabIndex = 88;
+            // 
+            // btnSetTOF1
+            // 
+            this.btnSetTOF1.Location = new System.Drawing.Point(140, 36);
+            this.btnSetTOF1.Name = "btnSetTOF1";
+            this.btnSetTOF1.Size = new System.Drawing.Size(54, 22);
+            this.btnSetTOF1.TabIndex = 43;
+            this.btnSetTOF1.Text = "Set";
+            this.btnSetTOF1.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxLNAFb
+            // 
+            this.checkBoxLNAFb.AutoSize = true;
+            this.checkBoxLNAFb.Location = new System.Drawing.Point(71, 66);
+            this.checkBoxLNAFb.Name = "checkBoxLNAFb";
+            this.checkBoxLNAFb.Size = new System.Drawing.Size(56, 17);
+            this.checkBoxLNAFb.TabIndex = 27;
+            this.checkBoxLNAFb.Text = "Lna fb";
+            this.checkBoxLNAFb.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxLnaCtrl
+            // 
+            this.checkBoxLnaCtrl.AutoSize = true;
+            this.checkBoxLnaCtrl.Location = new System.Drawing.Point(133, 66);
+            this.checkBoxLnaCtrl.Name = "checkBoxLnaCtrl";
+            this.checkBoxLnaCtrl.Size = new System.Drawing.Size(61, 17);
+            this.checkBoxLnaCtrl.TabIndex = 26;
+            this.checkBoxLnaCtrl.Text = "Lna ctrl";
+            this.checkBoxLnaCtrl.UseVisualStyleBackColor = true;
+            // 
+            // numericTimingReg
+            // 
+            this.numericTimingReg.Location = new System.Drawing.Point(84, 37);
+            this.numericTimingReg.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericTimingReg.Name = "numericTimingReg";
+            this.numericTimingReg.Size = new System.Drawing.Size(52, 20);
+            this.numericTimingReg.TabIndex = 24;
+            // 
+            // checkBoxPgaCtrl
+            // 
+            this.checkBoxPgaCtrl.AutoSize = true;
+            this.checkBoxPgaCtrl.Location = new System.Drawing.Point(6, 66);
+            this.checkBoxPgaCtrl.Name = "checkBoxPgaCtrl";
+            this.checkBoxPgaCtrl.Size = new System.Drawing.Size(62, 17);
+            this.checkBoxPgaCtrl.TabIndex = 21;
+            this.checkBoxPgaCtrl.Text = "Pga ctrl";
+            this.checkBoxPgaCtrl.UseVisualStyleBackColor = true;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(6, 39);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(56, 13);
+            this.label57.TabIndex = 25;
+            this.label57.Text = "Timing reg";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(6, 17);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(52, 13);
+            this.label58.TabIndex = 20;
+            this.label58.Text = "PGA gain";
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.Controls.Add(this.comboBoxEchoQualThld);
+            this.groupBox26.Controls.Add(this.checkListBoxConfig3);
+            this.groupBox26.Controls.Add(this.btnSetConfig3);
+            this.groupBox26.Controls.Add(this.label61);
+            this.groupBox26.Location = new System.Drawing.Point(157, 99);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(133, 136);
+            this.groupBox26.TabIndex = 55;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "Config 3";
+            // 
+            // comboBoxEchoQualThld
+            // 
+            this.comboBoxEchoQualThld.FormattingEnabled = true;
+            this.comboBoxEchoQualThld.Items.AddRange(new object[] {
+            "–35 mV",
+            "–50 mV",
+            "–75 mV",
+            "–125 mV",
+            "–220 mV",
+            "–410 mV",
+            "–775 mV",
+            "–1500 mV"});
+            this.comboBoxEchoQualThld.Location = new System.Drawing.Point(68, 84);
+            this.comboBoxEchoQualThld.Name = "comboBoxEchoQualThld";
+            this.comboBoxEchoQualThld.Size = new System.Drawing.Size(58, 21);
+            this.comboBoxEchoQualThld.TabIndex = 88;
+            // 
+            // checkListBoxConfig3
+            // 
+            this.checkListBoxConfig3.FormattingEnabled = true;
+            this.checkListBoxConfig3.Items.AddRange(new object[] {
+            "Temp mode",
+            "Temp RTD Sel",
+            "Temp clk div",
+            "Blanking"});
+            this.checkListBoxConfig3.Location = new System.Drawing.Point(6, 16);
+            this.checkListBoxConfig3.Name = "checkListBoxConfig3";
+            this.checkListBoxConfig3.Size = new System.Drawing.Size(121, 64);
+            this.checkListBoxConfig3.TabIndex = 90;
+            // 
+            // btnSetConfig3
+            // 
+            this.btnSetConfig3.Location = new System.Drawing.Point(68, 110);
+            this.btnSetConfig3.Name = "btnSetConfig3";
+            this.btnSetConfig3.Size = new System.Drawing.Size(59, 22);
+            this.btnSetConfig3.TabIndex = 90;
+            this.btnSetConfig3.Text = "Set";
+            this.btnSetConfig3.UseVisualStyleBackColor = true;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(3, 87);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(61, 13);
+            this.label61.TabIndex = 23;
+            this.label61.Text = "Ech qul thd";
+            // 
+            // groupBox27
+            // 
+            this.groupBox27.Controls.Add(this.comboBoxAutozeroPeriod);
+            this.groupBox27.Controls.Add(this.btnSetClockRate);
+            this.groupBox27.Controls.Add(this.checkBoxClockDiv);
+            this.groupBox27.Controls.Add(this.label64);
+            this.groupBox27.Location = new System.Drawing.Point(436, 237);
+            this.groupBox27.Name = "groupBox27";
+            this.groupBox27.Size = new System.Drawing.Size(197, 63);
+            this.groupBox27.TabIndex = 50;
+            this.groupBox27.TabStop = false;
+            this.groupBox27.Text = "Clock rate";
+            // 
+            // comboBoxAutozeroPeriod
+            // 
+            this.comboBoxAutozeroPeriod.FormattingEnabled = true;
+            this.comboBoxAutozeroPeriod.Items.AddRange(new object[] {
+            "128 ×T0",
+            "256 ×T0",
+            "512 ×T0",
+            "1024 ×T0"});
+            this.comboBoxAutozeroPeriod.Location = new System.Drawing.Point(92, 37);
+            this.comboBoxAutozeroPeriod.Name = "comboBoxAutozeroPeriod";
+            this.comboBoxAutozeroPeriod.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxAutozeroPeriod.TabIndex = 97;
+            // 
+            // btnSetClockRate
+            // 
+            this.btnSetClockRate.Location = new System.Drawing.Point(153, 37);
+            this.btnSetClockRate.Name = "btnSetClockRate";
+            this.btnSetClockRate.Size = new System.Drawing.Size(41, 22);
+            this.btnSetClockRate.TabIndex = 96;
+            this.btnSetClockRate.Text = "Set";
+            this.btnSetClockRate.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxClockDiv
+            // 
+            this.checkBoxClockDiv.AutoSize = true;
+            this.checkBoxClockDiv.Location = new System.Drawing.Point(7, 19);
+            this.checkBoxClockDiv.Name = "checkBoxClockDiv";
+            this.checkBoxClockDiv.Size = new System.Drawing.Size(74, 17);
+            this.checkBoxClockDiv.TabIndex = 17;
+            this.checkBoxClockDiv.Text = "Clock DIV";
+            this.checkBoxClockDiv.UseVisualStyleBackColor = true;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(6, 40);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(84, 13);
+            this.label64.TabIndex = 20;
+            this.label64.Text = "Autozero period:";
+            // 
+            // groupBox28
+            // 
+            this.groupBox28.Controls.Add(this.btnSetConfig2);
+            this.groupBox28.Controls.Add(this.numericTOFMeasMode);
+            this.groupBox28.Controls.Add(this.checkListBoxConfig2);
+            this.groupBox28.Controls.Add(this.label67);
+            this.groupBox28.Location = new System.Drawing.Point(8, 99);
+            this.groupBox28.Name = "groupBox28";
+            this.groupBox28.Size = new System.Drawing.Size(143, 170);
+            this.groupBox28.TabIndex = 51;
+            this.groupBox28.TabStop = false;
+            this.groupBox28.Text = "Config 2";
+            // 
+            // btnSetConfig2
+            // 
+            this.btnSetConfig2.Location = new System.Drawing.Point(78, 140);
+            this.btnSetConfig2.Name = "btnSetConfig2";
+            this.btnSetConfig2.Size = new System.Drawing.Size(59, 22);
+            this.btnSetConfig2.TabIndex = 88;
+            this.btnSetConfig2.Text = "Set";
+            this.btnSetConfig2.UseVisualStyleBackColor = true;
+            // 
+            // numericTOFMeasMode
+            // 
+            this.numericTOFMeasMode.Location = new System.Drawing.Point(97, 116);
+            this.numericTOFMeasMode.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericTOFMeasMode.Name = "numericTOFMeasMode";
+            this.numericTOFMeasMode.Size = new System.Drawing.Size(40, 20);
+            this.numericTOFMeasMode.TabIndex = 22;
+            // 
+            // checkListBoxConfig2
+            // 
+            this.checkListBoxConfig2.FormattingEnabled = true;
+            this.checkListBoxConfig2.Items.AddRange(new object[] {
+            "Vcom select",
+            "Measure mode",
+            "Damping",
+            "Channel swap",
+            "External channel sel",
+            "Channel select"});
+            this.checkListBoxConfig2.Location = new System.Drawing.Point(6, 16);
+            this.checkListBoxConfig2.Name = "checkListBoxConfig2";
+            this.checkListBoxConfig2.Size = new System.Drawing.Size(131, 94);
+            this.checkListBoxConfig2.TabIndex = 28;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(3, 119);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(88, 13);
+            this.label67.TabIndex = 23;
+            this.label67.Text = "TOF meas mode:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 298);
+            this.ClientSize = new System.Drawing.Size(648, 338);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -513,6 +1282,33 @@
             this.tabMeasurements.ResumeLayout(false);
             this.tabMeasurements.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericRxChannelSelect)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericDCPumpSelsect)).EndInit();
+            this.groupBox20.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericTOF0)).EndInit();
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numNumOfTxInBurst)).EndInit();
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericNumOfExpReciEvent)).EndInit();
+            this.groupBox29.ResumeLayout(false);
+            this.groupBox29.PerformLayout();
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericTxPhShiftPos)).EndInit();
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericTimingReg)).EndInit();
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
+            this.groupBox27.ResumeLayout(false);
+            this.groupBox27.PerformLayout();
+            this.groupBox28.ResumeLayout(false);
+            this.groupBox28.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericTOFMeasMode)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -557,6 +1353,65 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label labelComErrors;
         private System.Windows.Forms.Label labelMeasureErrors;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.NumericUpDown numericRxChannelSelect;
+        private System.Windows.Forms.NumericUpDown numericDCPumpSelsect;
+        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.Button btnSetTOF0;
+        private System.Windows.Forms.NumericUpDown numericTOF0;
+        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.ComboBox comboBoxFreqDivider;
+        private System.Windows.Forms.Button btnSetConfig0;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.NumericUpDown numNumOfTxInBurst;
+        private System.Windows.Forms.GroupBox groupBox22;
+        private System.Windows.Forms.Button btnSetErrorFlags;
+        private System.Windows.Forms.CheckedListBox checkedListBoxErrorFlags;
+        private System.Windows.Forms.GroupBox groupBox23;
+        private System.Windows.Forms.ComboBox comboBoxNumOfMeasToAverageStw;
+        private System.Windows.Forms.Button btnSetConfig1;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.NumericUpDown numericNumOfExpReciEvent;
+        private System.Windows.Forms.GroupBox groupBox29;
+        private System.Windows.Forms.ComboBox comboBoxTofTimeoutCtrl;
+        private System.Windows.Forms.ComboBox comboBoxShortTOFBlankPeriod;
+        private System.Windows.Forms.Button btnSetTimeout;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.CheckBox checkBoxForceShortTOF;
+        private System.Windows.Forms.CheckBox checkBoxEchoTimeout;
+        private System.Windows.Forms.GroupBox groupBox24;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.CheckedListBox checkListBoxConfig4;
+        private System.Windows.Forms.NumericUpDown numericTxPhShiftPos;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.GroupBox groupBox25;
+        private System.Windows.Forms.ComboBox comboBoxPGAGain;
+        private System.Windows.Forms.Button btnSetTOF1;
+        private System.Windows.Forms.CheckBox checkBoxLNAFb;
+        private System.Windows.Forms.CheckBox checkBoxLnaCtrl;
+        private System.Windows.Forms.NumericUpDown numericTimingReg;
+        private System.Windows.Forms.CheckBox checkBoxPgaCtrl;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.GroupBox groupBox26;
+        private System.Windows.Forms.ComboBox comboBoxEchoQualThld;
+        private System.Windows.Forms.CheckedListBox checkListBoxConfig3;
+        private System.Windows.Forms.Button btnSetConfig3;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.GroupBox groupBox27;
+        private System.Windows.Forms.ComboBox comboBoxAutozeroPeriod;
+        private System.Windows.Forms.Button btnSetClockRate;
+        private System.Windows.Forms.CheckBox checkBoxClockDiv;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.GroupBox groupBox28;
+        private System.Windows.Forms.Button btnSetConfig2;
+        private System.Windows.Forms.NumericUpDown numericTOFMeasMode;
+        private System.Windows.Forms.CheckedListBox checkListBoxConfig2;
+        private System.Windows.Forms.Label label67;
     }
 }
 
