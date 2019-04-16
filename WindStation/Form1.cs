@@ -68,7 +68,7 @@ namespace WindStation
         {
             short[] regs = new short[3];
             modbus.ReadRegisters(1, 1, 3, ref regs);
-            Debug.WriteLine(modbus.modbusStatus);
+            Debug.WriteLine($"Modbus status: {modbus.modbusStatus}");
             labelReg1.Text = regs[0].ToString("X4");
             labelReg2.Text = regs[1].ToString("X4");
             labelReg3.Text = regs[2].ToString("X4");
@@ -91,8 +91,8 @@ namespace WindStation
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            short[] regs = new short[12];
-            modbus.ReadRegisters(1, 1, 12, ref regs);
+            short[] regs = new short[13];
+            modbus.ReadRegisters(1, 1, 13, ref regs);
             Debug.WriteLine(modbus.modbusStatus);
             byte[] result = new byte[regs.Length * 2];
             Buffer.BlockCopy(regs, 0, result, 0, result.Length);
@@ -102,9 +102,10 @@ namespace WindStation
             labelTOF1.Text = ToFloat(result, 12).ToString();
             labelTOF2.Text = ToFloat(result, 16).ToString();
             labelTOF3.Text = ToFloat(result, 20).ToString();
-            label7.Text = modbus.modbusStatus;
-            chart1.Series[0].Points.Add(ToFloat(result, 0));
-            if (chart1.Series[0].Points.Count > 60) chart1.Series[0].Points.RemoveAt(0);
+            labelMeasureErrors.Text = System.BitConverter.ToInt16(result, 24).ToString();
+            labelComErrors.Text = modbus.modbusStatus;
+            //chart1.Series[0].Points.Add(ToFloat(result, 0));
+            //if (chart1.Series[0].Points.Count > 60) chart1.Series[0].Points.RemoveAt(0);
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -112,7 +113,7 @@ namespace WindStation
             Debug.WriteLine("Selected tab: " + tabControl1.SelectedIndex.ToString());
             if (tabControl1.SelectedIndex == 3)
             {
-                timer1.Interval = 1000;
+                timer1.Interval = 500;
                 timer1.Start();
             }
             else
@@ -120,5 +121,6 @@ namespace WindStation
                 timer1.Stop();
             }
         }
+
     }
 }

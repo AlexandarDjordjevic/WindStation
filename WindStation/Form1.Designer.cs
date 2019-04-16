@@ -54,6 +54,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tabCalibration = new System.Windows.Forms.TabPage();
             this.tabMeasurements = new System.Windows.Forms.TabPage();
+            this.labelMeasureErrors = new System.Windows.Forms.Label();
+            this.labelComErrors = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.labelTOF1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.labelTOF2 = new System.Windows.Forms.Label();
@@ -67,8 +70,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPortSettings.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -227,7 +228,7 @@
             this.tabSettings.Controls.Add(this.button2);
             this.tabSettings.Location = new System.Drawing.Point(4, 22);
             this.tabSettings.Name = "tabSettings";
-            this.tabSettings.Size = new System.Drawing.Size(486, 272);
+            this.tabSettings.Size = new System.Drawing.Size(649, 272);
             this.tabSettings.TabIndex = 3;
             this.tabSettings.Text = "Sensor Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
@@ -301,14 +302,15 @@
             this.tabCalibration.Location = new System.Drawing.Point(4, 22);
             this.tabCalibration.Name = "tabCalibration";
             this.tabCalibration.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCalibration.Size = new System.Drawing.Size(486, 272);
+            this.tabCalibration.Size = new System.Drawing.Size(649, 272);
             this.tabCalibration.TabIndex = 1;
             this.tabCalibration.Text = "Sensor Calibration";
             this.tabCalibration.UseVisualStyleBackColor = true;
             // 
             // tabMeasurements
             // 
-            this.tabMeasurements.Controls.Add(this.label7);
+            this.tabMeasurements.Controls.Add(this.labelMeasureErrors);
+            this.tabMeasurements.Controls.Add(this.labelComErrors);
             this.tabMeasurements.Controls.Add(this.chart1);
             this.tabMeasurements.Controls.Add(this.labelTOF1);
             this.tabMeasurements.Controls.Add(this.label16);
@@ -329,6 +331,57 @@
             this.tabMeasurements.TabIndex = 2;
             this.tabMeasurements.Text = "Measurements";
             this.tabMeasurements.UseVisualStyleBackColor = true;
+            // 
+            // labelMeasureErrors
+            // 
+            this.labelMeasureErrors.AutoSize = true;
+            this.labelMeasureErrors.Location = new System.Drawing.Point(18, 71);
+            this.labelMeasureErrors.Name = "labelMeasureErrors";
+            this.labelMeasureErrors.Size = new System.Drawing.Size(22, 13);
+            this.labelMeasureErrors.TabIndex = 24;
+            this.labelMeasureErrors.Text = "-----";
+            // 
+            // labelComErrors
+            // 
+            this.labelComErrors.AutoSize = true;
+            this.labelComErrors.Location = new System.Drawing.Point(18, 183);
+            this.labelComErrors.Name = "labelComErrors";
+            this.labelComErrors.Size = new System.Drawing.Size(22, 13);
+            this.labelComErrors.TabIndex = 23;
+            this.labelComErrors.Text = "-----";
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            this.chart1.BorderlineColor = System.Drawing.Color.Black;
+            chartArea1.AxisX.Interval = 10D;
+            chartArea1.AxisX.Maximum = 60D;
+            chartArea1.AxisX.Minimum = 0D;
+            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisY.Maximum = 5D;
+            chartArea1.AxisY.Minimum = 0D;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.AutoFitMinFontSize = 6;
+            legend1.DockedToChartArea = "ChartArea1";
+            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
+            legend1.MaximumAutoSize = 10F;
+            legend1.Name = "Legend1";
+            legend1.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Tall;
+            legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(123, 8);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.MarkerSize = 3;
+            series1.Name = "Wind Speed";
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(518, 258);
+            this.chart1.TabIndex = 22;
+            this.chart1.Text = "chart1";
             // 
             // labelTOF1
             // 
@@ -442,36 +495,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // chart1
-            // 
-            chartArea1.AxisX.Interval = 10D;
-            chartArea1.AxisX.Maximum = 60D;
-            chartArea1.AxisX.Minimum = 0D;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(140, 20);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Wind Speed";
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(501, 236);
-            this.chart1.TabIndex = 22;
-            this.chart1.Text = "chart1";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 199);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(22, 13);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "-----";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -532,7 +555,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelComErrors;
+        private System.Windows.Forms.Label labelMeasureErrors;
     }
 }
 
