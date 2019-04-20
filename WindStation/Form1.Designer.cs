@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPortSettings = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -69,45 +69,37 @@
             this.labelWindSpeed = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.numericRxChannelSelect = new System.Windows.Forms.NumericUpDown();
-            this.numericDCPumpSelsect = new System.Windows.Forms.NumericUpDown();
-            this.button35 = new System.Windows.Forms.Button();
+            this.tabTDC1000 = new System.Windows.Forms.TabPage();
+            this.labelDirection = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.btnSetTOF0 = new System.Windows.Forms.Button();
             this.numericTOF0 = new System.Windows.Forms.NumericUpDown();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.comboBoxFreqDivider = new System.Windows.Forms.ComboBox();
-            this.btnSetConfig0 = new System.Windows.Forms.Button();
+            this.buttonSet = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.numNumOfTxInBurst = new System.Windows.Forms.NumericUpDown();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.btnSetErrorFlags = new System.Windows.Forms.Button();
             this.checkedListBoxErrorFlags = new System.Windows.Forms.CheckedListBox();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.comboBoxNumOfMeasToAverageStw = new System.Windows.Forms.ComboBox();
-            this.btnSetConfig1 = new System.Windows.Forms.Button();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.numericNumOfExpReciEvent = new System.Windows.Forms.NumericUpDown();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
             this.comboBoxTofTimeoutCtrl = new System.Windows.Forms.ComboBox();
             this.comboBoxShortTOFBlankPeriod = new System.Windows.Forms.ComboBox();
-            this.btnSetTimeout = new System.Windows.Forms.Button();
             this.label70 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.checkBoxForceShortTOF = new System.Windows.Forms.CheckBox();
             this.checkBoxEchoTimeout = new System.Windows.Forms.CheckBox();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.button23 = new System.Windows.Forms.Button();
             this.checkListBoxConfig4 = new System.Windows.Forms.CheckedListBox();
             this.numericTxPhShiftPos = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.comboBoxPGAGain = new System.Windows.Forms.ComboBox();
-            this.btnSetTOF1 = new System.Windows.Forms.Button();
             this.checkBoxLNAFb = new System.Windows.Forms.CheckBox();
             this.checkBoxLnaCtrl = new System.Windows.Forms.CheckBox();
             this.numericTimingReg = new System.Windows.Forms.NumericUpDown();
@@ -117,27 +109,28 @@
             this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.comboBoxEchoQualThld = new System.Windows.Forms.ComboBox();
             this.checkListBoxConfig3 = new System.Windows.Forms.CheckedListBox();
-            this.btnSetConfig3 = new System.Windows.Forms.Button();
             this.label61 = new System.Windows.Forms.Label();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
             this.comboBoxAutozeroPeriod = new System.Windows.Forms.ComboBox();
-            this.btnSetClockRate = new System.Windows.Forms.Button();
             this.checkBoxClockDiv = new System.Windows.Forms.CheckBox();
             this.label64 = new System.Windows.Forms.Label();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.btnSetConfig2 = new System.Windows.Forms.Button();
             this.numericTOFMeasMode = new System.Windows.Forms.NumericUpDown();
             this.checkListBoxConfig2 = new System.Windows.Forms.CheckedListBox();
             this.label67 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.checkBoxAutoRefresh = new System.Windows.Forms.CheckBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPortSettings.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabSettings.SuspendLayout();
             this.tabMeasurements.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericRxChannelSelect)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericDCPumpSelsect)).BeginInit();
+            this.tabTDC1000.SuspendLayout();
             this.groupBox20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericTOF0)).BeginInit();
             this.groupBox21.SuspendLayout();
@@ -162,12 +155,12 @@
             this.tabControl1.Controls.Add(this.tabSettings);
             this.tabControl1.Controls.Add(this.tabCalibration);
             this.tabControl1.Controls.Add(this.tabMeasurements);
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabTDC1000);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(648, 338);
+            this.tabControl1.Size = new System.Drawing.Size(648, 318);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.Enter += new System.EventHandler(this.tabControl1_Enter);
@@ -183,7 +176,7 @@
             this.tabPortSettings.Location = new System.Drawing.Point(4, 22);
             this.tabPortSettings.Name = "tabPortSettings";
             this.tabPortSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPortSettings.Size = new System.Drawing.Size(640, 312);
+            this.tabPortSettings.Size = new System.Drawing.Size(640, 292);
             this.tabPortSettings.TabIndex = 0;
             this.tabPortSettings.Text = "Port Settings";
             this.tabPortSettings.UseVisualStyleBackColor = true;
@@ -307,7 +300,7 @@
             this.tabSettings.Controls.Add(this.button2);
             this.tabSettings.Location = new System.Drawing.Point(4, 22);
             this.tabSettings.Name = "tabSettings";
-            this.tabSettings.Size = new System.Drawing.Size(640, 312);
+            this.tabSettings.Size = new System.Drawing.Size(640, 292);
             this.tabSettings.TabIndex = 3;
             this.tabSettings.Text = "Sensor Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
@@ -381,7 +374,7 @@
             this.tabCalibration.Location = new System.Drawing.Point(4, 22);
             this.tabCalibration.Name = "tabCalibration";
             this.tabCalibration.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCalibration.Size = new System.Drawing.Size(640, 312);
+            this.tabCalibration.Size = new System.Drawing.Size(640, 292);
             this.tabCalibration.TabIndex = 1;
             this.tabCalibration.Text = "Sensor Calibration";
             this.tabCalibration.UseVisualStyleBackColor = true;
@@ -406,7 +399,7 @@
             this.tabMeasurements.Location = new System.Drawing.Point(4, 22);
             this.tabMeasurements.Name = "tabMeasurements";
             this.tabMeasurements.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMeasurements.Size = new System.Drawing.Size(640, 312);
+            this.tabMeasurements.Size = new System.Drawing.Size(640, 292);
             this.tabMeasurements.TabIndex = 2;
             this.tabMeasurements.Text = "Measurements";
             this.tabMeasurements.UseVisualStyleBackColor = true;
@@ -433,31 +426,31 @@
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
             this.chart1.BorderlineColor = System.Drawing.Color.Black;
-            chartArea2.AxisX.Interval = 10D;
-            chartArea2.AxisX.Maximum = 60D;
-            chartArea2.AxisX.Minimum = 0D;
-            chartArea2.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.AxisY.Maximum = 5D;
-            chartArea2.AxisY.Minimum = 0D;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.AutoFitMinFontSize = 6;
-            legend2.DockedToChartArea = "ChartArea1";
-            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
-            legend2.MaximumAutoSize = 10F;
-            legend2.Name = "Legend1";
-            legend2.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Tall;
-            legend2.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea1.AxisX.Interval = 10D;
+            chartArea1.AxisX.Maximum = 60D;
+            chartArea1.AxisX.Minimum = 0D;
+            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisY.Maximum = 5D;
+            chartArea1.AxisY.Minimum = 0D;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.AutoFitMinFontSize = 6;
+            legend1.DockedToChartArea = "ChartArea1";
+            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
+            legend1.MaximumAutoSize = 10F;
+            legend1.Name = "Legend1";
+            legend1.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Tall;
+            legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(123, 8);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.MarkerSize = 3;
-            series2.Name = "Wind Speed";
-            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.MarkerSize = 3;
+            series1.Name = "Wind Speed";
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(518, 258);
             this.chart1.TabIndex = 22;
             this.chart1.Text = "chart1";
@@ -570,90 +563,63 @@
             this.label12.TabIndex = 8;
             this.label12.Text = "Wind Speed:";
             // 
-            // timer1
+            // tabTDC1000
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.tabTDC1000.Controls.Add(this.buttonRefresh);
+            this.tabTDC1000.Controls.Add(this.buttonSet);
+            this.tabTDC1000.Controls.Add(this.checkBoxAutoRefresh);
+            this.tabTDC1000.Controls.Add(this.labelDirection);
+            this.tabTDC1000.Controls.Add(this.label7);
+            this.tabTDC1000.Controls.Add(this.groupBox20);
+            this.tabTDC1000.Controls.Add(this.groupBox21);
+            this.tabTDC1000.Controls.Add(this.groupBox22);
+            this.tabTDC1000.Controls.Add(this.groupBox23);
+            this.tabTDC1000.Controls.Add(this.groupBox29);
+            this.tabTDC1000.Controls.Add(this.groupBox24);
+            this.tabTDC1000.Controls.Add(this.groupBox25);
+            this.tabTDC1000.Controls.Add(this.groupBox26);
+            this.tabTDC1000.Controls.Add(this.groupBox27);
+            this.tabTDC1000.Controls.Add(this.groupBox28);
+            this.tabTDC1000.Location = new System.Drawing.Point(4, 22);
+            this.tabTDC1000.Name = "tabTDC1000";
+            this.tabTDC1000.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTDC1000.Size = new System.Drawing.Size(640, 292);
+            this.tabTDC1000.TabIndex = 4;
+            this.tabTDC1000.Text = "TDC1000";
+            this.tabTDC1000.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // labelDirection
             // 
-            this.tabPage1.Controls.Add(this.numericRxChannelSelect);
-            this.tabPage1.Controls.Add(this.numericDCPumpSelsect);
-            this.tabPage1.Controls.Add(this.button35);
-            this.tabPage1.Controls.Add(this.groupBox20);
-            this.tabPage1.Controls.Add(this.groupBox21);
-            this.tabPage1.Controls.Add(this.groupBox22);
-            this.tabPage1.Controls.Add(this.groupBox23);
-            this.tabPage1.Controls.Add(this.groupBox29);
-            this.tabPage1.Controls.Add(this.groupBox24);
-            this.tabPage1.Controls.Add(this.groupBox25);
-            this.tabPage1.Controls.Add(this.groupBox26);
-            this.tabPage1.Controls.Add(this.groupBox27);
-            this.tabPage1.Controls.Add(this.groupBox28);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(640, 312);
-            this.tabPage1.TabIndex = 4;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.labelDirection.AutoSize = true;
+            this.labelDirection.Location = new System.Drawing.Point(67, 227);
+            this.labelDirection.Name = "labelDirection";
+            this.labelDirection.Size = new System.Drawing.Size(13, 13);
+            this.labelDirection.TabIndex = 89;
+            this.labelDirection.Text = "--";
             // 
-            // numericRxChannelSelect
+            // label7
             // 
-            this.numericRxChannelSelect.Location = new System.Drawing.Point(138, 281);
-            this.numericRxChannelSelect.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericRxChannelSelect.Name = "numericRxChannelSelect";
-            this.numericRxChannelSelect.Size = new System.Drawing.Size(40, 20);
-            this.numericRxChannelSelect.TabIndex = 58;
-            // 
-            // numericDCPumpSelsect
-            // 
-            this.numericDCPumpSelsect.Location = new System.Drawing.Point(89, 281);
-            this.numericDCPumpSelsect.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericDCPumpSelsect.Name = "numericDCPumpSelsect";
-            this.numericDCPumpSelsect.Size = new System.Drawing.Size(40, 20);
-            this.numericDCPumpSelsect.TabIndex = 57;
-            // 
-            // button35
-            // 
-            this.button35.Location = new System.Drawing.Point(8, 281);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(75, 23);
-            this.button35.TabIndex = 56;
-            this.button35.Text = "Set channel";
-            this.button35.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 227);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 88;
+            this.label7.Text = "Direction:";
             // 
             // groupBox20
             // 
             this.groupBox20.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox20.Controls.Add(this.btnSetTOF0);
             this.groupBox20.Controls.Add(this.numericTOF0);
-            this.groupBox20.Location = new System.Drawing.Point(436, 99);
+            this.groupBox20.Location = new System.Drawing.Point(158, 206);
             this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(197, 42);
+            this.groupBox20.Size = new System.Drawing.Size(132, 42);
             this.groupBox20.TabIndex = 54;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "TOF 0";
             // 
-            // btnSetTOF0
-            // 
-            this.btnSetTOF0.Location = new System.Drawing.Point(142, 10);
-            this.btnSetTOF0.Name = "btnSetTOF0";
-            this.btnSetTOF0.Size = new System.Drawing.Size(52, 26);
-            this.btnSetTOF0.TabIndex = 40;
-            this.btnSetTOF0.Text = "Set";
-            this.btnSetTOF0.UseVisualStyleBackColor = true;
-            // 
             // numericTOF0
             // 
-            this.numericTOF0.Location = new System.Drawing.Point(6, 15);
+            this.numericTOF0.Location = new System.Drawing.Point(6, 14);
             this.numericTOF0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -666,13 +632,12 @@
             // groupBox21
             // 
             this.groupBox21.Controls.Add(this.comboBoxFreqDivider);
-            this.groupBox21.Controls.Add(this.btnSetConfig0);
             this.groupBox21.Controls.Add(this.label35);
             this.groupBox21.Controls.Add(this.label37);
             this.groupBox21.Controls.Add(this.numNumOfTxInBurst);
             this.groupBox21.Location = new System.Drawing.Point(8, 6);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(143, 91);
+            this.groupBox21.Size = new System.Drawing.Size(143, 67);
             this.groupBox21.TabIndex = 47;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Config 0";
@@ -694,14 +659,15 @@
             this.comboBoxFreqDivider.Size = new System.Drawing.Size(39, 21);
             this.comboBoxFreqDivider.TabIndex = 87;
             // 
-            // btnSetConfig0
+            // buttonSet
             // 
-            this.btnSetConfig0.Location = new System.Drawing.Point(78, 64);
-            this.btnSetConfig0.Name = "btnSetConfig0";
-            this.btnSetConfig0.Size = new System.Drawing.Size(56, 22);
-            this.btnSetConfig0.TabIndex = 35;
-            this.btnSetConfig0.Text = "Set";
-            this.btnSetConfig0.UseVisualStyleBackColor = true;
+            this.buttonSet.Location = new System.Drawing.Point(559, 266);
+            this.buttonSet.Name = "buttonSet";
+            this.buttonSet.Size = new System.Drawing.Size(75, 23);
+            this.buttonSet.TabIndex = 35;
+            this.buttonSet.Text = "Set";
+            this.buttonSet.UseVisualStyleBackColor = true;
+            this.buttonSet.Click += new System.EventHandler(this.buttonSet_Click);
             // 
             // label35
             // 
@@ -735,23 +701,13 @@
             // 
             // groupBox22
             // 
-            this.groupBox22.Controls.Add(this.btnSetErrorFlags);
             this.groupBox22.Controls.Add(this.checkedListBoxErrorFlags);
-            this.groupBox22.Location = new System.Drawing.Point(296, 209);
+            this.groupBox22.Location = new System.Drawing.Point(295, 163);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(134, 96);
+            this.groupBox22.Size = new System.Drawing.Size(134, 72);
             this.groupBox22.TabIndex = 53;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Error flags";
-            // 
-            // btnSetErrorFlags
-            // 
-            this.btnSetErrorFlags.Location = new System.Drawing.Point(68, 67);
-            this.btnSetErrorFlags.Name = "btnSetErrorFlags";
-            this.btnSetErrorFlags.Size = new System.Drawing.Size(56, 22);
-            this.btnSetErrorFlags.TabIndex = 95;
-            this.btnSetErrorFlags.Text = "Set";
-            this.btnSetErrorFlags.UseVisualStyleBackColor = true;
             // 
             // checkedListBoxErrorFlags
             // 
@@ -768,13 +724,12 @@
             // groupBox23
             // 
             this.groupBox23.Controls.Add(this.comboBoxNumOfMeasToAverageStw);
-            this.groupBox23.Controls.Add(this.btnSetConfig1);
             this.groupBox23.Controls.Add(this.label46);
             this.groupBox23.Controls.Add(this.label47);
             this.groupBox23.Controls.Add(this.numericNumOfExpReciEvent);
             this.groupBox23.Location = new System.Drawing.Point(158, 5);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(273, 92);
+            this.groupBox23.Size = new System.Drawing.Size(273, 68);
             this.groupBox23.TabIndex = 48;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Config 1";
@@ -795,15 +750,6 @@
             this.comboBoxNumOfMeasToAverageStw.Name = "comboBoxNumOfMeasToAverageStw";
             this.comboBoxNumOfMeasToAverageStw.Size = new System.Drawing.Size(54, 21);
             this.comboBoxNumOfMeasToAverageStw.TabIndex = 88;
-            // 
-            // btnSetConfig1
-            // 
-            this.btnSetConfig1.Location = new System.Drawing.Point(211, 62);
-            this.btnSetConfig1.Name = "btnSetConfig1";
-            this.btnSetConfig1.Size = new System.Drawing.Size(56, 22);
-            this.btnSetConfig1.TabIndex = 38;
-            this.btnSetConfig1.Text = "Set";
-            this.btnSetConfig1.UseVisualStyleBackColor = true;
             // 
             // label46
             // 
@@ -837,14 +783,15 @@
             // 
             // groupBox29
             // 
+            this.groupBox29.Controls.Add(this.label13);
+            this.groupBox29.Controls.Add(this.label9);
             this.groupBox29.Controls.Add(this.comboBoxTofTimeoutCtrl);
             this.groupBox29.Controls.Add(this.comboBoxShortTOFBlankPeriod);
-            this.groupBox29.Controls.Add(this.btnSetTimeout);
             this.groupBox29.Controls.Add(this.label70);
             this.groupBox29.Controls.Add(this.label71);
             this.groupBox29.Controls.Add(this.checkBoxForceShortTOF);
             this.groupBox29.Controls.Add(this.checkBoxEchoTimeout);
-            this.groupBox29.Location = new System.Drawing.Point(437, 147);
+            this.groupBox29.Location = new System.Drawing.Point(436, 105);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.Size = new System.Drawing.Size(197, 84);
             this.groupBox29.TabIndex = 52;
@@ -855,40 +802,31 @@
             // 
             this.comboBoxTofTimeoutCtrl.FormattingEnabled = true;
             this.comboBoxTofTimeoutCtrl.Items.AddRange(new object[] {
-            "128 ×T0",
-            "256 ×T0",
-            "512 ×T0",
-            "1024 ×T0"});
+            "128",
+            "256",
+            "512",
+            "1024"});
             this.comboBoxTofTimeoutCtrl.Location = new System.Drawing.Point(91, 35);
             this.comboBoxTofTimeoutCtrl.Name = "comboBoxTofTimeoutCtrl";
-            this.comboBoxTofTimeoutCtrl.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxTofTimeoutCtrl.Size = new System.Drawing.Size(60, 21);
             this.comboBoxTofTimeoutCtrl.TabIndex = 89;
             // 
             // comboBoxShortTOFBlankPeriod
             // 
             this.comboBoxShortTOFBlankPeriod.FormattingEnabled = true;
             this.comboBoxShortTOFBlankPeriod.Items.AddRange(new object[] {
-            "8 ×T0",
-            "16 ×T0",
-            "32 ×T0",
-            "64 ×T0",
-            "128 ×T0",
-            "256 ×T0",
-            "512 ×T0",
-            "1024 ×T0"});
+            "8",
+            "16",
+            "32",
+            "64",
+            "128",
+            "256",
+            "512",
+            "1024"});
             this.comboBoxShortTOFBlankPeriod.Location = new System.Drawing.Point(91, 11);
             this.comboBoxShortTOFBlankPeriod.Name = "comboBoxShortTOFBlankPeriod";
-            this.comboBoxShortTOFBlankPeriod.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxShortTOFBlankPeriod.Size = new System.Drawing.Size(60, 21);
             this.comboBoxShortTOFBlankPeriod.TabIndex = 88;
-            // 
-            // btnSetTimeout
-            // 
-            this.btnSetTimeout.Location = new System.Drawing.Point(152, 35);
-            this.btnSetTimeout.Name = "btnSetTimeout";
-            this.btnSetTimeout.Size = new System.Drawing.Size(41, 22);
-            this.btnSetTimeout.TabIndex = 45;
-            this.btnSetTimeout.Text = "Set";
-            this.btnSetTimeout.UseVisualStyleBackColor = true;
             // 
             // label70
             // 
@@ -930,25 +868,15 @@
             // 
             // groupBox24
             // 
-            this.groupBox24.Controls.Add(this.button23);
             this.groupBox24.Controls.Add(this.checkListBoxConfig4);
             this.groupBox24.Controls.Add(this.numericTxPhShiftPos);
             this.groupBox24.Controls.Add(this.label48);
-            this.groupBox24.Location = new System.Drawing.Point(296, 99);
+            this.groupBox24.Location = new System.Drawing.Point(296, 79);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(133, 106);
+            this.groupBox24.Size = new System.Drawing.Size(133, 80);
             this.groupBox24.TabIndex = 49;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Config 4";
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(68, 77);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(59, 22);
-            this.button23.TabIndex = 92;
-            this.button23.Text = "Set";
-            this.button23.UseVisualStyleBackColor = true;
             // 
             // checkListBoxConfig4
             // 
@@ -991,7 +919,6 @@
             // 
             this.groupBox25.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox25.Controls.Add(this.comboBoxPGAGain);
-            this.groupBox25.Controls.Add(this.btnSetTOF1);
             this.groupBox25.Controls.Add(this.checkBoxLNAFb);
             this.groupBox25.Controls.Add(this.checkBoxLnaCtrl);
             this.groupBox25.Controls.Add(this.numericTimingReg);
@@ -1019,32 +946,23 @@
             "21 dB"});
             this.comboBoxPGAGain.Location = new System.Drawing.Point(84, 12);
             this.comboBoxPGAGain.Name = "comboBoxPGAGain";
-            this.comboBoxPGAGain.Size = new System.Drawing.Size(51, 21);
+            this.comboBoxPGAGain.Size = new System.Drawing.Size(67, 21);
             this.comboBoxPGAGain.TabIndex = 88;
-            // 
-            // btnSetTOF1
-            // 
-            this.btnSetTOF1.Location = new System.Drawing.Point(140, 36);
-            this.btnSetTOF1.Name = "btnSetTOF1";
-            this.btnSetTOF1.Size = new System.Drawing.Size(54, 22);
-            this.btnSetTOF1.TabIndex = 43;
-            this.btnSetTOF1.Text = "Set";
-            this.btnSetTOF1.UseVisualStyleBackColor = true;
             // 
             // checkBoxLNAFb
             // 
             this.checkBoxLNAFb.AutoSize = true;
             this.checkBoxLNAFb.Location = new System.Drawing.Point(71, 66);
             this.checkBoxLNAFb.Name = "checkBoxLNAFb";
-            this.checkBoxLNAFb.Size = new System.Drawing.Size(56, 17);
+            this.checkBoxLNAFb.Size = new System.Drawing.Size(66, 17);
             this.checkBoxLNAFb.TabIndex = 27;
-            this.checkBoxLNAFb.Text = "Lna fb";
+            this.checkBoxLNAFb.Text = "Lna Res";
             this.checkBoxLNAFb.UseVisualStyleBackColor = true;
             // 
             // checkBoxLnaCtrl
             // 
             this.checkBoxLnaCtrl.AutoSize = true;
-            this.checkBoxLnaCtrl.Location = new System.Drawing.Point(133, 66);
+            this.checkBoxLnaCtrl.Location = new System.Drawing.Point(137, 66);
             this.checkBoxLnaCtrl.Name = "checkBoxLnaCtrl";
             this.checkBoxLnaCtrl.Size = new System.Drawing.Size(61, 17);
             this.checkBoxLnaCtrl.TabIndex = 26;
@@ -1060,7 +978,7 @@
             0,
             0});
             this.numericTimingReg.Name = "numericTimingReg";
-            this.numericTimingReg.Size = new System.Drawing.Size(52, 20);
+            this.numericTimingReg.Size = new System.Drawing.Size(67, 20);
             this.numericTimingReg.TabIndex = 24;
             // 
             // checkBoxPgaCtrl
@@ -1095,11 +1013,10 @@
             // 
             this.groupBox26.Controls.Add(this.comboBoxEchoQualThld);
             this.groupBox26.Controls.Add(this.checkListBoxConfig3);
-            this.groupBox26.Controls.Add(this.btnSetConfig3);
             this.groupBox26.Controls.Add(this.label61);
-            this.groupBox26.Location = new System.Drawing.Point(157, 99);
+            this.groupBox26.Location = new System.Drawing.Point(157, 79);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(133, 136);
+            this.groupBox26.Size = new System.Drawing.Size(133, 124);
             this.groupBox26.TabIndex = 55;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Config 3";
@@ -1134,15 +1051,6 @@
             this.checkListBoxConfig3.Size = new System.Drawing.Size(121, 64);
             this.checkListBoxConfig3.TabIndex = 90;
             // 
-            // btnSetConfig3
-            // 
-            this.btnSetConfig3.Location = new System.Drawing.Point(68, 110);
-            this.btnSetConfig3.Name = "btnSetConfig3";
-            this.btnSetConfig3.Size = new System.Drawing.Size(59, 22);
-            this.btnSetConfig3.TabIndex = 90;
-            this.btnSetConfig3.Text = "Set";
-            this.btnSetConfig3.UseVisualStyleBackColor = true;
-            // 
             // label61
             // 
             this.label61.AutoSize = true;
@@ -1154,11 +1062,11 @@
             // 
             // groupBox27
             // 
+            this.groupBox27.Controls.Add(this.label15);
             this.groupBox27.Controls.Add(this.comboBoxAutozeroPeriod);
-            this.groupBox27.Controls.Add(this.btnSetClockRate);
             this.groupBox27.Controls.Add(this.checkBoxClockDiv);
             this.groupBox27.Controls.Add(this.label64);
-            this.groupBox27.Location = new System.Drawing.Point(436, 237);
+            this.groupBox27.Location = new System.Drawing.Point(436, 195);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.Size = new System.Drawing.Size(197, 63);
             this.groupBox27.TabIndex = 50;
@@ -1169,23 +1077,14 @@
             // 
             this.comboBoxAutozeroPeriod.FormattingEnabled = true;
             this.comboBoxAutozeroPeriod.Items.AddRange(new object[] {
-            "128 ×T0",
-            "256 ×T0",
-            "512 ×T0",
-            "1024 ×T0"});
+            "64",
+            "128",
+            "256",
+            "512"});
             this.comboBoxAutozeroPeriod.Location = new System.Drawing.Point(92, 37);
             this.comboBoxAutozeroPeriod.Name = "comboBoxAutozeroPeriod";
             this.comboBoxAutozeroPeriod.Size = new System.Drawing.Size(59, 21);
             this.comboBoxAutozeroPeriod.TabIndex = 97;
-            // 
-            // btnSetClockRate
-            // 
-            this.btnSetClockRate.Location = new System.Drawing.Point(153, 37);
-            this.btnSetClockRate.Name = "btnSetClockRate";
-            this.btnSetClockRate.Size = new System.Drawing.Size(41, 22);
-            this.btnSetClockRate.TabIndex = 96;
-            this.btnSetClockRate.Text = "Set";
-            this.btnSetClockRate.UseVisualStyleBackColor = true;
             // 
             // checkBoxClockDiv
             // 
@@ -1208,25 +1107,15 @@
             // 
             // groupBox28
             // 
-            this.groupBox28.Controls.Add(this.btnSetConfig2);
             this.groupBox28.Controls.Add(this.numericTOFMeasMode);
             this.groupBox28.Controls.Add(this.checkListBoxConfig2);
             this.groupBox28.Controls.Add(this.label67);
-            this.groupBox28.Location = new System.Drawing.Point(8, 99);
+            this.groupBox28.Location = new System.Drawing.Point(6, 79);
             this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Size = new System.Drawing.Size(143, 170);
+            this.groupBox28.Size = new System.Drawing.Size(143, 144);
             this.groupBox28.TabIndex = 51;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "Config 2";
-            // 
-            // btnSetConfig2
-            // 
-            this.btnSetConfig2.Location = new System.Drawing.Point(78, 140);
-            this.btnSetConfig2.Name = "btnSetConfig2";
-            this.btnSetConfig2.Size = new System.Drawing.Size(59, 22);
-            this.btnSetConfig2.TabIndex = 88;
-            this.btnSetConfig2.Text = "Set";
-            this.btnSetConfig2.UseVisualStyleBackColor = true;
             // 
             // numericTOFMeasMode
             // 
@@ -1264,11 +1153,63 @@
             this.label67.TabIndex = 23;
             this.label67.Text = "TOF meas mode:";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // checkBoxAutoRefresh
+            // 
+            this.checkBoxAutoRefresh.AutoSize = true;
+            this.checkBoxAutoRefresh.Location = new System.Drawing.Point(382, 269);
+            this.checkBoxAutoRefresh.Name = "checkBoxAutoRefresh";
+            this.checkBoxAutoRefresh.Size = new System.Drawing.Size(85, 17);
+            this.checkBoxAutoRefresh.TabIndex = 90;
+            this.checkBoxAutoRefresh.Text = "AutoRefresh";
+            this.checkBoxAutoRefresh.UseVisualStyleBackColor = true;
+            this.checkBoxAutoRefresh.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Location = new System.Drawing.Point(478, 266);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(75, 23);
+            this.buttonRefresh.TabIndex = 91;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(154, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(25, 13);
+            this.label9.TabIndex = 90;
+            this.label9.Text = "xT0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(154, 40);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(25, 13);
+            this.label13.TabIndex = 91;
+            this.label13.Text = "xT0";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(154, 41);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(25, 13);
+            this.label15.TabIndex = 92;
+            this.label15.Text = "xT0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 338);
+            this.ClientSize = new System.Drawing.Size(648, 318);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1282,9 +1223,8 @@
             this.tabMeasurements.ResumeLayout(false);
             this.tabMeasurements.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericRxChannelSelect)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericDCPumpSelsect)).EndInit();
+            this.tabTDC1000.ResumeLayout(false);
+            this.tabTDC1000.PerformLayout();
             this.groupBox20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericTOF0)).EndInit();
             this.groupBox21.ResumeLayout(false);
@@ -1353,44 +1293,35 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label labelComErrors;
         private System.Windows.Forms.Label labelMeasureErrors;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.NumericUpDown numericRxChannelSelect;
-        private System.Windows.Forms.NumericUpDown numericDCPumpSelsect;
-        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.TabPage tabTDC1000;
         private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.Button btnSetTOF0;
         private System.Windows.Forms.NumericUpDown numericTOF0;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.ComboBox comboBoxFreqDivider;
-        private System.Windows.Forms.Button btnSetConfig0;
+        private System.Windows.Forms.Button buttonSet;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.NumericUpDown numNumOfTxInBurst;
         private System.Windows.Forms.GroupBox groupBox22;
-        private System.Windows.Forms.Button btnSetErrorFlags;
         private System.Windows.Forms.CheckedListBox checkedListBoxErrorFlags;
         private System.Windows.Forms.GroupBox groupBox23;
         private System.Windows.Forms.ComboBox comboBoxNumOfMeasToAverageStw;
-        private System.Windows.Forms.Button btnSetConfig1;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.NumericUpDown numericNumOfExpReciEvent;
         private System.Windows.Forms.GroupBox groupBox29;
         private System.Windows.Forms.ComboBox comboBoxTofTimeoutCtrl;
         private System.Windows.Forms.ComboBox comboBoxShortTOFBlankPeriod;
-        private System.Windows.Forms.Button btnSetTimeout;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.CheckBox checkBoxForceShortTOF;
         private System.Windows.Forms.CheckBox checkBoxEchoTimeout;
         private System.Windows.Forms.GroupBox groupBox24;
-        private System.Windows.Forms.Button button23;
         private System.Windows.Forms.CheckedListBox checkListBoxConfig4;
         private System.Windows.Forms.NumericUpDown numericTxPhShiftPos;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.GroupBox groupBox25;
         private System.Windows.Forms.ComboBox comboBoxPGAGain;
-        private System.Windows.Forms.Button btnSetTOF1;
         private System.Windows.Forms.CheckBox checkBoxLNAFb;
         private System.Windows.Forms.CheckBox checkBoxLnaCtrl;
         private System.Windows.Forms.NumericUpDown numericTimingReg;
@@ -1400,18 +1331,22 @@
         private System.Windows.Forms.GroupBox groupBox26;
         private System.Windows.Forms.ComboBox comboBoxEchoQualThld;
         private System.Windows.Forms.CheckedListBox checkListBoxConfig3;
-        private System.Windows.Forms.Button btnSetConfig3;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.GroupBox groupBox27;
         private System.Windows.Forms.ComboBox comboBoxAutozeroPeriod;
-        private System.Windows.Forms.Button btnSetClockRate;
         private System.Windows.Forms.CheckBox checkBoxClockDiv;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.GroupBox groupBox28;
-        private System.Windows.Forms.Button btnSetConfig2;
         private System.Windows.Forms.NumericUpDown numericTOFMeasMode;
         private System.Windows.Forms.CheckedListBox checkListBoxConfig2;
         private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label labelDirection;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.CheckBox checkBoxAutoRefresh;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label15;
     }
 }
 
