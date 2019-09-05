@@ -344,8 +344,8 @@ namespace WindStation
             {
                 case 3:
                     {
-                        UInt16[] regs = new UInt16[13];
-                        modbus.ReadRegisters(1, 1, 13, ref regs);
+                        UInt16[] regs = new UInt16[29];
+                        modbus.ReadRegisters(1, 1, 29, ref regs);
                         Debug.WriteLine(modbus.modbusStatus);
                         byte[] result = new byte[regs.Length * 2];
                         Buffer.BlockCopy(regs, 0, result, 0, result.Length);
@@ -357,6 +357,13 @@ namespace WindStation
                         labelTOF3.Text = ToFloat(result, 20).ToString();
                         labelMeasureErrors.Text = System.BitConverter.ToInt16(result, 24).ToString();
                         labelComErrors.Text = modbus.modbusStatus;
+
+                        labelTime1.Text = BitConverter.ToInt32(result, 38).ToString();
+                        labelTime2.Text = BitConverter.ToInt32(result, 42).ToString();
+                        labelCalibration1.Text = BitConverter.ToInt32(result, 46).ToString();
+                        labelCalibration2.Text = BitConverter.ToInt32(result, 50).ToString();
+                        labelClockCount.Text = BitConverter.ToInt32(result, 54).ToString();
+
                         //chart1.Series[0].Points.Add(ToFloat(result, 0));
                         //if (chart1.Series[0].Points.Count > 60) chart1.Series[0].Points.RemoveAt(0);
                     }
@@ -548,6 +555,11 @@ namespace WindStation
         private void buttonSet_Click(object sender, EventArgs e)
         {
             TDC1000SetRegisters();
+        }
+
+        private void tabMeasurements_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
