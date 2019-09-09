@@ -336,6 +336,19 @@ namespace WindStation
 
             #endregion
 
+            #region Trigger Settings
+            if ((regs[5] & 0x1000) == 0x1000) cbDirection1.Checked = true;
+            else cbDirection1.Checked = false;
+            if ((regs[5] & 0x2000) == 0x2000) cbDirection2.Checked = true;
+            else cbDirection2.Checked = false;
+            if ((regs[5] & 0x4000) == 0x4000) cbDirection3.Checked = true;
+            else cbDirection3.Checked = false;
+            if ((regs[5] & 0x8000) == 0x8000) cbDirection4.Checked = true;
+            else cbDirection4.Checked = false;
+            numericPeriod.Value = regs[5] & 0x0fff;
+            #endregion
+
+
             labelDirection.Text = (regs[5] / 256).ToString();
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -432,7 +445,7 @@ namespace WindStation
             //TDC1000SetConfig1()
             value = (byte)(numericNumOfExpReciEvent.Value);
             var temp = (byte)(comboBoxNumOfMeasToAverageStw.SelectedIndex);
-            if (temp == 0xff) temp = 0; 
+            if (temp == 0xff) temp = 0;
             value |= (byte)(temp << 3);
             regs[0] |= value;
 
@@ -446,7 +459,7 @@ namespace WindStation
                 }
             }
             value |= (byte)numericTOFMeasMode.Value;
-            regs[1] =(UInt16)(256 * value);
+            regs[1] = (UInt16)(256 * value);
 
             //TDC1000SetConfig3()
             value = (byte)comboBoxEchoQualThld.SelectedIndex;
@@ -496,8 +509,8 @@ namespace WindStation
 
             //Timeout
             value = 0;
-            if(checkBoxForceShortTOF.Checked) value |= 0x40;
-            if(checkBoxEchoTimeout.Checked) value |= 0x04;
+            if (checkBoxForceShortTOF.Checked) value |= 0x40;
+            if (checkBoxEchoTimeout.Checked) value |= 0x04;
             switch (comboBoxTofTimeoutCtrl.Text)
             {
                 case "128":
@@ -542,22 +555,35 @@ namespace WindStation
             regs[4] = (UInt16)(value * 256);
 
             //TDC1000SetClockRate()
-            value = ((byte)(comboBoxAutozeroPeriod.SelectedIndex) == 0xff) ? (byte)0:(byte)(comboBoxAutozeroPeriod.SelectedIndex);
+            value = ((byte)(comboBoxAutozeroPeriod.SelectedIndex) == 0xff) ? (byte)0 : (byte)(comboBoxAutozeroPeriod.SelectedIndex);
             if (checkBoxClockDiv.Checked) value |= 0x04;
             regs[4] |= value;
 
+            //set trigger direction and trigger period
+            value = 0;
+            if (cbDirection1.Checked) value |= 0x10;
+            if (cbDirection2.Checked) value |= 0x20;
+            if (cbDirection3.Checked) value |= 0x40;
+            if (cbDirection4.Checked) value |= 0x80;
 
+            regs[5] = (UInt16)(value << 12);
+            regs[5] |= (UInt16)((UInt16)(numericPeriod.Value) & 0x0fff);
 
-
-            modbus.WriteMultipleRegisters(1, 14, 5, regs);
+            modbus.WriteMultipleRegisters(1, 14, 6, regs);
         }
 
+        
         private void buttonSet_Click(object sender, EventArgs e)
         {
             TDC1000SetRegisters();
         }
 
         private void tabMeasurements_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox22_Enter(object sender, EventArgs e)
         {
 
         }
