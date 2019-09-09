@@ -1,5 +1,6 @@
 .vs/
+*.cache
+/WindStation/obj/
 *.suo
 *.exe
 *.pdb
-*.cache

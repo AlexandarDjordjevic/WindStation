@@ -166,7 +166,7 @@ namespace WindStation
         #endregion
 
         #region Function 16 - Write Multiple Registers
-        public bool WriteMultipleRegisters(byte address, ushort start, ushort registers, short[] values)
+        public bool WriteMultipleRegisters(byte address, UInt16 start, UInt16 registers, UInt16[] values)
         {
             //Ensure port is open:
             if (sp.IsOpen)
@@ -222,7 +222,7 @@ namespace WindStation
         #endregion
 
         #region Function 3 - Read Registers
-        public bool ReadRegisters(byte address, ushort start, ushort registers, ref short[] values)
+        public bool ReadRegisters(byte address, UInt16 start, UInt16 registers, ref UInt16[] values)
         {
             //Ensure port is open:
             if (sp.IsOpen)
