@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPortSettings = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -51,40 +57,21 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tabCalibration = new System.Windows.Forms.TabPage();
             this.tabMeasurements = new System.Windows.Forms.TabPage();
-            this.labelClockCount = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.labelTime2 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.labelCalibration1 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.labelCalibration2 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.labelTime1 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.labelMeasureErrors = new System.Windows.Forms.Label();
-            this.labelComErrors = new System.Windows.Forms.Label();
-            this.labelTOF1 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.labelTOF2 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.labelTOF3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.labelTOF0 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelWindDirection = new System.Windows.Forms.Label();
-            this.labelWindSpeed = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.tabTDC1000 = new System.Windows.Forms.TabPage();
-            this.cbDirection4 = new System.Windows.Forms.CheckBox();
-            this.cbDirection3 = new System.Windows.Forms.CheckBox();
-            this.cbDirection2 = new System.Windows.Forms.CheckBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbDirection1 = new System.Windows.Forms.CheckBox();
+            this.cbDirection4 = new System.Windows.Forms.CheckBox();
+            this.cbDirection2 = new System.Windows.Forms.CheckBox();
+            this.cbDirection3 = new System.Windows.Forms.CheckBox();
+            this.labelDirection = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.numericPeriod = new System.Windows.Forms.NumericUpDown();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonSet = new System.Windows.Forms.Button();
             this.checkBoxAutoRefresh = new System.Windows.Forms.CheckBox();
-            this.labelDirection = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.numericTOF0 = new System.Windows.Forms.NumericUpDown();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
@@ -134,17 +121,33 @@
             this.checkListBoxConfig2 = new System.Windows.Forms.CheckedListBox();
             this.label67 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.numericPeriod = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chartWindDirection = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label10 = new System.Windows.Forms.Label();
+            this.labelTOF3 = new System.Windows.Forms.Label();
+            this.labelTOF0 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.labelTOF2 = new System.Windows.Forms.Label();
+            this.labelWindDirection = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.labelWindSpeed = new System.Windows.Forms.Label();
+            this.labelTOF1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.chartWindSpeed = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPortSettings.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabSettings.SuspendLayout();
             this.tabMeasurements.SuspendLayout();
             this.tabTDC1000.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPeriod)).BeginInit();
             this.groupBox20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericTOF0)).BeginInit();
             this.groupBox21.SuspendLayout();
@@ -161,10 +164,10 @@
             this.groupBox27.SuspendLayout();
             this.groupBox28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericTOFMeasMode)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericPeriod)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartWindDirection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartWindSpeed)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -178,7 +181,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(648, 411);
+            this.tabControl1.Size = new System.Drawing.Size(647, 411);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.Enter += new System.EventHandler(this.tabControl1_Enter);
@@ -194,7 +197,7 @@
             this.tabPortSettings.Location = new System.Drawing.Point(4, 22);
             this.tabPortSettings.Name = "tabPortSettings";
             this.tabPortSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPortSettings.Size = new System.Drawing.Size(640, 329);
+            this.tabPortSettings.Size = new System.Drawing.Size(643, 500);
             this.tabPortSettings.TabIndex = 0;
             this.tabPortSettings.Text = "Port Settings";
             this.tabPortSettings.UseVisualStyleBackColor = true;
@@ -318,7 +321,7 @@
             this.tabSettings.Controls.Add(this.button2);
             this.tabSettings.Location = new System.Drawing.Point(4, 22);
             this.tabSettings.Name = "tabSettings";
-            this.tabSettings.Size = new System.Drawing.Size(640, 329);
+            this.tabSettings.Size = new System.Drawing.Size(643, 500);
             this.tabSettings.TabIndex = 3;
             this.tabSettings.Text = "Sensor Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
@@ -392,261 +395,24 @@
             this.tabCalibration.Location = new System.Drawing.Point(4, 22);
             this.tabCalibration.Name = "tabCalibration";
             this.tabCalibration.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCalibration.Size = new System.Drawing.Size(640, 329);
+            this.tabCalibration.Size = new System.Drawing.Size(643, 500);
             this.tabCalibration.TabIndex = 1;
             this.tabCalibration.Text = "Sensor Calibration";
             this.tabCalibration.UseVisualStyleBackColor = true;
             // 
             // tabMeasurements
             // 
-            this.tabMeasurements.Controls.Add(this.labelClockCount);
-            this.tabMeasurements.Controls.Add(this.label19);
-            this.tabMeasurements.Controls.Add(this.labelTime2);
-            this.tabMeasurements.Controls.Add(this.label18);
-            this.tabMeasurements.Controls.Add(this.labelCalibration1);
-            this.tabMeasurements.Controls.Add(this.label20);
-            this.tabMeasurements.Controls.Add(this.labelCalibration2);
-            this.tabMeasurements.Controls.Add(this.label22);
-            this.tabMeasurements.Controls.Add(this.labelTime1);
-            this.tabMeasurements.Controls.Add(this.label24);
-            this.tabMeasurements.Controls.Add(this.labelMeasureErrors);
-            this.tabMeasurements.Controls.Add(this.labelComErrors);
-            this.tabMeasurements.Controls.Add(this.labelTOF1);
-            this.tabMeasurements.Controls.Add(this.label16);
-            this.tabMeasurements.Controls.Add(this.labelTOF2);
-            this.tabMeasurements.Controls.Add(this.label14);
-            this.tabMeasurements.Controls.Add(this.labelTOF3);
-            this.tabMeasurements.Controls.Add(this.label10);
-            this.tabMeasurements.Controls.Add(this.labelTOF0);
-            this.tabMeasurements.Controls.Add(this.label8);
-            this.tabMeasurements.Controls.Add(this.labelWindDirection);
-            this.tabMeasurements.Controls.Add(this.labelWindSpeed);
-            this.tabMeasurements.Controls.Add(this.label11);
-            this.tabMeasurements.Controls.Add(this.label12);
+            this.tabMeasurements.Controls.Add(this.chartWindDirection);
+            this.tabMeasurements.Controls.Add(this.chartWindSpeed);
+            this.tabMeasurements.Controls.Add(this.groupBox5);
             this.tabMeasurements.Location = new System.Drawing.Point(4, 22);
             this.tabMeasurements.Name = "tabMeasurements";
             this.tabMeasurements.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMeasurements.Size = new System.Drawing.Size(640, 329);
+            this.tabMeasurements.Size = new System.Drawing.Size(639, 385);
             this.tabMeasurements.TabIndex = 2;
             this.tabMeasurements.Text = "Measurements";
             this.tabMeasurements.UseVisualStyleBackColor = true;
             this.tabMeasurements.Click += new System.EventHandler(this.tabMeasurements_Click);
-            // 
-            // labelClockCount
-            // 
-            this.labelClockCount.AutoSize = true;
-            this.labelClockCount.Location = new System.Drawing.Point(327, 94);
-            this.labelClockCount.Name = "labelClockCount";
-            this.labelClockCount.Size = new System.Drawing.Size(13, 13);
-            this.labelClockCount.TabIndex = 34;
-            this.labelClockCount.Text = "0";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(228, 94);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 13);
-            this.label19.TabIndex = 33;
-            this.label19.Text = "Clock Count:";
-            // 
-            // labelTime2
-            // 
-            this.labelTime2.AutoSize = true;
-            this.labelTime2.Location = new System.Drawing.Point(327, 39);
-            this.labelTime2.Name = "labelTime2";
-            this.labelTime2.Size = new System.Drawing.Size(13, 13);
-            this.labelTime2.TabIndex = 32;
-            this.labelTime2.Text = "0";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(228, 39);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(42, 13);
-            this.label18.TabIndex = 31;
-            this.label18.Text = "Time 2:";
-            // 
-            // labelCalibration1
-            // 
-            this.labelCalibration1.AutoSize = true;
-            this.labelCalibration1.Location = new System.Drawing.Point(327, 58);
-            this.labelCalibration1.Name = "labelCalibration1";
-            this.labelCalibration1.Size = new System.Drawing.Size(13, 13);
-            this.labelCalibration1.TabIndex = 30;
-            this.labelCalibration1.Text = "0";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(228, 58);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(68, 13);
-            this.label20.TabIndex = 29;
-            this.label20.Text = "Calibration 1:";
-            // 
-            // labelCalibration2
-            // 
-            this.labelCalibration2.AutoSize = true;
-            this.labelCalibration2.Location = new System.Drawing.Point(327, 77);
-            this.labelCalibration2.Name = "labelCalibration2";
-            this.labelCalibration2.Size = new System.Drawing.Size(13, 13);
-            this.labelCalibration2.TabIndex = 28;
-            this.labelCalibration2.Text = "0";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(228, 77);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(68, 13);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "Calibration 2:";
-            // 
-            // labelTime1
-            // 
-            this.labelTime1.AutoSize = true;
-            this.labelTime1.Location = new System.Drawing.Point(327, 20);
-            this.labelTime1.Name = "labelTime1";
-            this.labelTime1.Size = new System.Drawing.Size(13, 13);
-            this.labelTime1.TabIndex = 26;
-            this.labelTime1.Text = "0";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(228, 20);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(42, 13);
-            this.label24.TabIndex = 25;
-            this.label24.Text = "Time 1:";
-            // 
-            // labelMeasureErrors
-            // 
-            this.labelMeasureErrors.AutoSize = true;
-            this.labelMeasureErrors.Location = new System.Drawing.Point(18, 68);
-            this.labelMeasureErrors.Name = "labelMeasureErrors";
-            this.labelMeasureErrors.Size = new System.Drawing.Size(22, 13);
-            this.labelMeasureErrors.TabIndex = 24;
-            this.labelMeasureErrors.Text = "-----";
-            // 
-            // labelComErrors
-            // 
-            this.labelComErrors.AutoSize = true;
-            this.labelComErrors.Location = new System.Drawing.Point(18, 167);
-            this.labelComErrors.Name = "labelComErrors";
-            this.labelComErrors.Size = new System.Drawing.Size(22, 13);
-            this.labelComErrors.TabIndex = 23;
-            this.labelComErrors.Text = "-----";
-            // 
-            // labelTOF1
-            // 
-            this.labelTOF1.AutoSize = true;
-            this.labelTOF1.Location = new System.Drawing.Point(73, 110);
-            this.labelTOF1.Name = "labelTOF1";
-            this.labelTOF1.Size = new System.Drawing.Size(13, 13);
-            this.labelTOF1.TabIndex = 21;
-            this.labelTOF1.Text = "0";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(18, 110);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 13);
-            this.label16.TabIndex = 20;
-            this.label16.Text = "TOF 1:";
-            // 
-            // labelTOF2
-            // 
-            this.labelTOF2.AutoSize = true;
-            this.labelTOF2.Location = new System.Drawing.Point(73, 129);
-            this.labelTOF2.Name = "labelTOF2";
-            this.labelTOF2.Size = new System.Drawing.Size(13, 13);
-            this.labelTOF2.TabIndex = 19;
-            this.labelTOF2.Text = "0";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(18, 129);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(40, 13);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "TOF 2:";
-            // 
-            // labelTOF3
-            // 
-            this.labelTOF3.AutoSize = true;
-            this.labelTOF3.Location = new System.Drawing.Point(73, 148);
-            this.labelTOF3.Name = "labelTOF3";
-            this.labelTOF3.Size = new System.Drawing.Size(13, 13);
-            this.labelTOF3.TabIndex = 17;
-            this.labelTOF3.Text = "0";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 148);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "TOF 3:";
-            // 
-            // labelTOF0
-            // 
-            this.labelTOF0.AutoSize = true;
-            this.labelTOF0.Location = new System.Drawing.Point(73, 91);
-            this.labelTOF0.Name = "labelTOF0";
-            this.labelTOF0.Size = new System.Drawing.Size(13, 13);
-            this.labelTOF0.TabIndex = 15;
-            this.labelTOF0.Text = "0";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 91);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "TOF 0:";
-            // 
-            // labelWindDirection
-            // 
-            this.labelWindDirection.AutoSize = true;
-            this.labelWindDirection.Location = new System.Drawing.Point(104, 44);
-            this.labelWindDirection.Name = "labelWindDirection";
-            this.labelWindDirection.Size = new System.Drawing.Size(13, 13);
-            this.labelWindDirection.TabIndex = 13;
-            this.labelWindDirection.Text = "0";
-            // 
-            // labelWindSpeed
-            // 
-            this.labelWindSpeed.AutoSize = true;
-            this.labelWindSpeed.Location = new System.Drawing.Point(104, 20);
-            this.labelWindSpeed.Name = "labelWindSpeed";
-            this.labelWindSpeed.Size = new System.Drawing.Size(13, 13);
-            this.labelWindSpeed.TabIndex = 11;
-            this.labelWindSpeed.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 44);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Wind Direction:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(18, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 13);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Wind Speed:";
             // 
             // tabTDC1000
             // 
@@ -667,10 +433,48 @@
             this.tabTDC1000.Location = new System.Drawing.Point(4, 22);
             this.tabTDC1000.Name = "tabTDC1000";
             this.tabTDC1000.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTDC1000.Size = new System.Drawing.Size(640, 385);
+            this.tabTDC1000.Size = new System.Drawing.Size(639, 385);
             this.tabTDC1000.TabIndex = 4;
             this.tabTDC1000.Text = "TDC1000";
             this.tabTDC1000.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox4.Controls.Add(this.groupBox2);
+            this.groupBox4.Controls.Add(this.groupBox3);
+            this.groupBox4.Location = new System.Drawing.Point(6, 254);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(250, 117);
+            this.groupBox4.TabIndex = 96;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Trigger";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox2.Controls.Add(this.cbDirection1);
+            this.groupBox2.Controls.Add(this.cbDirection4);
+            this.groupBox2.Controls.Add(this.cbDirection2);
+            this.groupBox2.Controls.Add(this.cbDirection3);
+            this.groupBox2.Controls.Add(this.labelDirection);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Location = new System.Drawing.Point(6, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(151, 82);
+            this.groupBox2.TabIndex = 55;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Direction";
+            // 
+            // cbDirection1
+            // 
+            this.cbDirection1.AutoSize = true;
+            this.cbDirection1.Location = new System.Drawing.Point(6, 37);
+            this.cbDirection1.Name = "cbDirection1";
+            this.cbDirection1.Size = new System.Drawing.Size(68, 17);
+            this.cbDirection1.TabIndex = 92;
+            this.cbDirection1.Text = "Enable 1";
+            this.cbDirection1.UseVisualStyleBackColor = true;
             // 
             // cbDirection4
             // 
@@ -682,16 +486,6 @@
             this.cbDirection4.Text = "Enable 4";
             this.cbDirection4.UseVisualStyleBackColor = true;
             // 
-            // cbDirection3
-            // 
-            this.cbDirection3.AutoSize = true;
-            this.cbDirection3.Location = new System.Drawing.Point(6, 60);
-            this.cbDirection3.Name = "cbDirection3";
-            this.cbDirection3.Size = new System.Drawing.Size(68, 17);
-            this.cbDirection3.TabIndex = 94;
-            this.cbDirection3.Text = "Enable 3";
-            this.cbDirection3.UseVisualStyleBackColor = true;
-            // 
             // cbDirection2
             // 
             this.cbDirection2.AutoSize = true;
@@ -702,15 +496,76 @@
             this.cbDirection2.Text = "Enable 2";
             this.cbDirection2.UseVisualStyleBackColor = true;
             // 
-            // cbDirection1
+            // cbDirection3
             // 
-            this.cbDirection1.AutoSize = true;
-            this.cbDirection1.Location = new System.Drawing.Point(6, 37);
-            this.cbDirection1.Name = "cbDirection1";
-            this.cbDirection1.Size = new System.Drawing.Size(68, 17);
-            this.cbDirection1.TabIndex = 92;
-            this.cbDirection1.Text = "Enable 1";
-            this.cbDirection1.UseVisualStyleBackColor = true;
+            this.cbDirection3.AutoSize = true;
+            this.cbDirection3.Location = new System.Drawing.Point(6, 60);
+            this.cbDirection3.Name = "cbDirection3";
+            this.cbDirection3.Size = new System.Drawing.Size(68, 17);
+            this.cbDirection3.TabIndex = 94;
+            this.cbDirection3.Text = "Enable 3";
+            this.cbDirection3.UseVisualStyleBackColor = true;
+            // 
+            // labelDirection
+            // 
+            this.labelDirection.AutoSize = true;
+            this.labelDirection.Location = new System.Drawing.Point(64, 15);
+            this.labelDirection.Name = "labelDirection";
+            this.labelDirection.Size = new System.Drawing.Size(13, 13);
+            this.labelDirection.TabIndex = 89;
+            this.labelDirection.Text = "--";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 13);
+            this.label7.TabIndex = 88;
+            this.label7.Text = "Current:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.numericPeriod);
+            this.groupBox3.Location = new System.Drawing.Point(165, 19);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(70, 82);
+            this.groupBox3.TabIndex = 55;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Period";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 41);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(46, 13);
+            this.label17.TabIndex = 20;
+            this.label17.Text = "x100 ms";
+            // 
+            // numericPeriod
+            // 
+            this.numericPeriod.Location = new System.Drawing.Point(6, 16);
+            this.numericPeriod.Maximum = new decimal(new int[] {
+            4095,
+            0,
+            0,
+            0});
+            this.numericPeriod.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericPeriod.Name = "numericPeriod";
+            this.numericPeriod.Size = new System.Drawing.Size(52, 20);
+            this.numericPeriod.TabIndex = 19;
+            this.numericPeriod.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // buttonRefresh
             // 
@@ -742,24 +597,6 @@
             this.checkBoxAutoRefresh.Text = "AutoRefresh";
             this.checkBoxAutoRefresh.UseVisualStyleBackColor = true;
             this.checkBoxAutoRefresh.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // labelDirection
-            // 
-            this.labelDirection.AutoSize = true;
-            this.labelDirection.Location = new System.Drawing.Point(64, 15);
-            this.labelDirection.Name = "labelDirection";
-            this.labelDirection.Size = new System.Drawing.Size(13, 13);
-            this.labelDirection.TabIndex = 89;
-            this.labelDirection.Text = "--";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 13);
-            this.label7.TabIndex = 88;
-            this.label7.Text = "Current:";
             // 
             // groupBox20
             // 
@@ -1329,83 +1166,203 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // groupBox2
+            // chartWindDirection
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Controls.Add(this.cbDirection1);
-            this.groupBox2.Controls.Add(this.cbDirection4);
-            this.groupBox2.Controls.Add(this.cbDirection2);
-            this.groupBox2.Controls.Add(this.cbDirection3);
-            this.groupBox2.Controls.Add(this.labelDirection);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(6, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(151, 82);
-            this.groupBox2.TabIndex = 55;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Direction";
+            chartArea1.Name = "ChartArea1";
+            this.chartWindDirection.ChartAreas.Add(chartArea1);
+            this.chartWindDirection.Location = new System.Drawing.Point(348, 0);
+            this.chartWindDirection.Name = "chartWindDirection";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Polar;
+            series1.Name = "Series1";
+            this.chartWindDirection.Series.Add(series1);
+            this.chartWindDirection.Size = new System.Drawing.Size(291, 222);
+            this.chartWindDirection.TabIndex = 39;
+            this.chartWindDirection.Text = "chartWindDirection";
             // 
-            // groupBox3
+            // label10
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.numericPeriod);
-            this.groupBox3.Location = new System.Drawing.Point(165, 19);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(70, 82);
-            this.groupBox3.TabIndex = 55;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Period";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 178);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "TOF 3:";
             // 
-            // numericPeriod
+            // labelTOF3
             // 
-            this.numericPeriod.Location = new System.Drawing.Point(6, 16);
-            this.numericPeriod.Maximum = new decimal(new int[] {
-            4095,
-            0,
-            0,
-            0});
-            this.numericPeriod.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericPeriod.Name = "numericPeriod";
-            this.numericPeriod.Size = new System.Drawing.Size(52, 20);
-            this.numericPeriod.TabIndex = 19;
-            this.numericPeriod.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.labelTOF3.AutoSize = true;
+            this.labelTOF3.Location = new System.Drawing.Point(96, 178);
+            this.labelTOF3.Name = "labelTOF3";
+            this.labelTOF3.Size = new System.Drawing.Size(13, 13);
+            this.labelTOF3.TabIndex = 17;
+            this.labelTOF3.Text = "0";
             // 
-            // label17
+            // labelTOF0
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 41);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 13);
-            this.label17.TabIndex = 20;
-            this.label17.Text = "x100 ms";
+            this.labelTOF0.AutoSize = true;
+            this.labelTOF0.Location = new System.Drawing.Point(96, 87);
+            this.labelTOF0.Name = "labelTOF0";
+            this.labelTOF0.Size = new System.Drawing.Size(13, 13);
+            this.labelTOF0.TabIndex = 15;
+            this.labelTOF0.Text = "0";
             // 
-            // groupBox4
+            // label14
             // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox4.Controls.Add(this.groupBox2);
-            this.groupBox4.Controls.Add(this.groupBox3);
-            this.groupBox4.Location = new System.Drawing.Point(6, 254);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(250, 117);
-            this.groupBox4.TabIndex = 96;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Trigger";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 150);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(40, 13);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "TOF 2:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 87);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "TOF 0:";
+            // 
+            // labelTOF2
+            // 
+            this.labelTOF2.AutoSize = true;
+            this.labelTOF2.Location = new System.Drawing.Point(96, 150);
+            this.labelTOF2.Name = "labelTOF2";
+            this.labelTOF2.Size = new System.Drawing.Size(13, 13);
+            this.labelTOF2.TabIndex = 19;
+            this.labelTOF2.Text = "0";
+            // 
+            // labelWindDirection
+            // 
+            this.labelWindDirection.AutoSize = true;
+            this.labelWindDirection.Location = new System.Drawing.Point(96, 33);
+            this.labelWindDirection.Name = "labelWindDirection";
+            this.labelWindDirection.Size = new System.Drawing.Size(13, 13);
+            this.labelWindDirection.TabIndex = 13;
+            this.labelWindDirection.Text = "0";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 117);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 13);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "TOF 1:";
+            // 
+            // labelWindSpeed
+            // 
+            this.labelWindSpeed.AutoSize = true;
+            this.labelWindSpeed.Location = new System.Drawing.Point(96, 16);
+            this.labelWindSpeed.Name = "labelWindSpeed";
+            this.labelWindSpeed.Size = new System.Drawing.Size(13, 13);
+            this.labelWindSpeed.TabIndex = 11;
+            this.labelWindSpeed.Text = "0";
+            // 
+            // labelTOF1
+            // 
+            this.labelTOF1.AutoSize = true;
+            this.labelTOF1.Location = new System.Drawing.Point(96, 117);
+            this.labelTOF1.Name = "labelTOF1";
+            this.labelTOF1.Size = new System.Drawing.Size(13, 13);
+            this.labelTOF1.TabIndex = 21;
+            this.labelTOF1.Text = "0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 33);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Direction:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Speed:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(115, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(202, 194);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(33, 56);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(43, 18);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "NNE";
+            // 
+            // chartWindSpeed
+            // 
+            chartArea2.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea2.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea2.Name = "ChartArea1";
+            this.chartWindSpeed.ChartAreas.Add(chartArea2);
+            legend1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
+            legend1.DockedToChartArea = "ChartArea1";
+            legend1.Name = "Legend1";
+            this.chartWindSpeed.Legends.Add(legend1);
+            this.chartWindSpeed.Location = new System.Drawing.Point(8, 226);
+            this.chartWindSpeed.Name = "chartWindSpeed";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            series2.IsXValueIndexed = true;
+            series2.LabelForeColor = System.Drawing.Color.Bisque;
+            series2.Legend = "Legend1";
+            series2.Name = "Speed";
+            series2.YValuesPerPoint = 6;
+            this.chartWindSpeed.Series.Add(series2);
+            this.chartWindSpeed.Size = new System.Drawing.Size(623, 153);
+            this.chartWindSpeed.TabIndex = 37;
+            this.chartWindSpeed.Text = "Speed";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.pictureBox1);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Controls.Add(this.labelTOF1);
+            this.groupBox5.Controls.Add(this.labelWindSpeed);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.labelWindDirection);
+            this.groupBox5.Controls.Add(this.labelTOF2);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.labelTOF0);
+            this.groupBox5.Controls.Add(this.labelTOF3);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Location = new System.Drawing.Point(0, 0);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(340, 222);
+            this.groupBox5.TabIndex = 36;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Wind";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 411);
+            this.ClientSize = new System.Drawing.Size(647, 411);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
@@ -1416,9 +1373,14 @@
             this.tabSettings.ResumeLayout(false);
             this.tabSettings.PerformLayout();
             this.tabMeasurements.ResumeLayout(false);
-            this.tabMeasurements.PerformLayout();
             this.tabTDC1000.ResumeLayout(false);
             this.tabTDC1000.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPeriod)).EndInit();
             this.groupBox20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericTOF0)).EndInit();
             this.groupBox21.ResumeLayout(false);
@@ -1443,12 +1405,11 @@
             this.groupBox28.ResumeLayout(false);
             this.groupBox28.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericTOFMeasMode)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericPeriod)).EndInit();
-            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartWindDirection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartWindSpeed)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1477,21 +1438,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label labelWindDirection;
-        private System.Windows.Forms.Label labelWindSpeed;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label labelTOF1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label labelTOF2;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label labelTOF3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label labelTOF0;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label labelComErrors;
-        private System.Windows.Forms.Label labelMeasureErrors;
         private System.Windows.Forms.TabPage tabTDC1000;
         private System.Windows.Forms.GroupBox groupBox20;
         private System.Windows.Forms.NumericUpDown numericTOF0;
@@ -1546,16 +1493,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label labelTime2;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label labelCalibration1;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label labelCalibration2;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label labelTime1;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label labelClockCount;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.CheckBox cbDirection3;
         private System.Windows.Forms.CheckBox cbDirection2;
         private System.Windows.Forms.CheckBox cbDirection1;
@@ -1565,6 +1502,23 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.NumericUpDown numericPeriod;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartWindDirection;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartWindSpeed;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label labelTOF1;
+        private System.Windows.Forms.Label labelWindSpeed;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label labelWindDirection;
+        private System.Windows.Forms.Label labelTOF2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelTOF0;
+        private System.Windows.Forms.Label labelTOF3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }
 

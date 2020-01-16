@@ -91,7 +91,7 @@ namespace WindStation
         void TDC1000RefreshRegisters()
         {
             UInt16[] regs = new UInt16[100];
-            modbus.ReadRegisters(1, 14, 6, ref regs);
+            modbus.ReadRegisters(1, 14, 7, ref regs);
 
             #region Confg 0
             byte temp = (byte)(regs[0] / 256);
@@ -336,49 +336,65 @@ namespace WindStation
 
             #endregion
 
-            #region Trigger Settings
-            if ((regs[5] & 0x1000) == 0x1000) cbDirection1.Checked = true;
-            else cbDirection1.Checked = false;
-            if ((regs[5] & 0x2000) == 0x2000) cbDirection2.Checked = true;
-            else cbDirection2.Checked = false;
-            if ((regs[5] & 0x4000) == 0x4000) cbDirection3.Checked = true;
-            else cbDirection3.Checked = false;
-            if ((regs[5] & 0x8000) == 0x8000) cbDirection4.Checked = true;
-            else cbDirection4.Checked = false;
-            numericPeriod.Value = regs[5] & 0x0fff;
-            #endregion
-
-
             labelDirection.Text = (regs[5] / 256).ToString();
+
+            #region Trigger Settings
+            if ((regs[6] & 0x1000) == 0x1000) cbDirection1.Checked = true;
+            else cbDirection1.Checked = false;
+            if ((regs[6] & 0x2000) == 0x2000) cbDirection2.Checked = true;
+            else cbDirection2.Checked = false;
+            if ((regs[6] & 0x4000) == 0x4000) cbDirection3.Checked = true;
+            else cbDirection3.Checked = false;
+            if ((regs[6] & 0x8000) == 0x8000) cbDirection4.Checked = true;
+            else cbDirection4.Checked = false;
+            if((regs[6] & 0x0fff) > 0)numericPeriod.Value = regs[6] & 0x0fff;
+            #endregion
         }
+
+        public static double test = 0.1;
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             switch(tabControl1.SelectedIndex)
             {
                 case 3:
                     {
-                        UInt16[] regs = new UInt16[29];
-                        modbus.ReadRegisters(1, 1, 29, ref regs);
-                        Debug.WriteLine(modbus.modbusStatus);
-                        byte[] result = new byte[regs.Length * 2];
-                        Buffer.BlockCopy(regs, 0, result, 0, result.Length);
-                        labelWindSpeed.Text = ToFloat(result, 0).ToString();
-                        labelWindDirection.Text = ToFloat(result, 4).ToString();
-                        labelTOF0.Text = ToFloat(result, 8).ToString();
-                        labelTOF1.Text = ToFloat(result, 12).ToString();
-                        labelTOF2.Text = ToFloat(result, 16).ToString();
-                        labelTOF3.Text = ToFloat(result, 20).ToString();
-                        labelMeasureErrors.Text = System.BitConverter.ToInt16(result, 24).ToString();
-                        labelComErrors.Text = modbus.modbusStatus;
+                        //UInt16[] regs = new UInt16[29];
+                        //modbus.ReadRegisters(1, 1, 29, ref regs);
+                        //Debug.WriteLine(modbus.modbusStatus);
+                        //byte[] result = new byte[regs.Length * 2];
+                        //Buffer.BlockCopy(regs, 0, result, 0, result.Length);
+                        //labelWindSpeed.Text = ToFloat(result, 0).ToString();
+                        //labelWindDirection.Text = ToFloat(result, 4).ToString();
+                        //labelTOF0.Text = ToFloat(result, 8).ToString();
+                        //labelTOF1.Text = ToFloat(result, 12).ToString();
+                        //labelTOF2.Text = ToFloat(result, 16).ToString();
+                        //labelTOF3.Text = ToFloat(result, 20).ToString();
 
-                        labelTime1.Text = BitConverter.ToInt32(result, 38).ToString();
-                        labelTime2.Text = BitConverter.ToInt32(result, 42).ToString();
-                        labelCalibration1.Text = BitConverter.ToInt32(result, 46).ToString();
-                        labelCalibration2.Text = BitConverter.ToInt32(result, 50).ToString();
-                        labelClockCount.Text = BitConverter.ToInt32(result, 54).ToString();
+                        //labelTime1.Text = BitConverter.ToInt32(result, 38).ToString();
+                        //labelTime2.Text = BitConverter.ToInt32(result, 42).ToString();
+                        //labelCalibration1.Text = BitConverter.ToInt32(result, 46).ToString();
+                        //labelCalibration2.Text = BitConverter.ToInt32(result, 50).ToString();
+                        //labelClockCount.Text = BitConverter.ToInt32(result, 54).ToString();
 
                         //chart1.Series[0].Points.Add(ToFloat(result, 0));
                         //if (chart1.Series[0].Points.Count > 60) chart1.Series[0].Points.RemoveAt(0);
+                        Random rnd = new Random();
+                        double speed = rnd.NextDouble() * 50;
+                        double direction = rnd.NextDouble() * 360;
+                        test += 1;
+                        if (chartWindSpeed.Series[0].Points.Count >= 100)
+                        {
+                            chartWindSpeed.Series[0].Points.RemoveAt(0);
+                        }
+                        if (chartWindDirection.Series[0].Points.Count >= 5)
+                        {
+                            chartWindDirection.Series[0].Points.RemoveAt(0);
+                        }
+                        chartWindSpeed.Series[0].Points.Add(speed);
+                        chartWindDirection.Series[0].Points.AddXY(direction, speed);
+                        chartWindDirection.Series[0].Points.AddXY(direction, 0);
+
                     }
                     break;
                 case 4:
@@ -566,10 +582,14 @@ namespace WindStation
             if (cbDirection3.Checked) value |= 0x40;
             if (cbDirection4.Checked) value |= 0x80;
 
-            regs[5] = (UInt16)(value << 12);
-            regs[5] |= (UInt16)((UInt16)(numericPeriod.Value) & 0x0fff);
+            Console.WriteLine("Value: " + value);
+            regs[6] = (UInt16)((UInt16)(value) << 8);
+            Console.WriteLine("Value: " + regs[6].ToString());
+            regs[6] |= (UInt16)((UInt16)(numericPeriod.Value) & 0x0fff);
 
-            modbus.WriteMultipleRegisters(1, 14, 6, regs);
+            Console.WriteLine("Value: " + regs[6].ToString());
+
+            modbus.WriteMultipleRegisters(1, 14, 7, regs);
         }
 
         
@@ -584,6 +604,11 @@ namespace WindStation
         }
 
         private void groupBox22_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
