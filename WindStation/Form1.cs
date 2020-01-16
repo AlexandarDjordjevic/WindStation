@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
@@ -351,7 +352,12 @@ namespace WindStation
             #endregion
         }
 
-        public static double test = 0.1;
+        private string degToCompass(float num)
+        {
+            string[] arr = { "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW" };
+            var val = (int)((num / 22.5) + .5);
+            return arr[(val % 16)];
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -359,30 +365,48 @@ namespace WindStation
             {
                 case 3:
                     {
-                        //UInt16[] regs = new UInt16[29];
-                        //modbus.ReadRegisters(1, 1, 29, ref regs);
-                        //Debug.WriteLine(modbus.modbusStatus);
-                        //byte[] result = new byte[regs.Length * 2];
-                        //Buffer.BlockCopy(regs, 0, result, 0, result.Length);
-                        //labelWindSpeed.Text = ToFloat(result, 0).ToString();
-                        //labelWindDirection.Text = ToFloat(result, 4).ToString();
-                        //labelTOF0.Text = ToFloat(result, 8).ToString();
-                        //labelTOF1.Text = ToFloat(result, 12).ToString();
-                        //labelTOF2.Text = ToFloat(result, 16).ToString();
-                        //labelTOF3.Text = ToFloat(result, 20).ToString();
+                        UInt16[] regs = new UInt16[29];
+                        modbus.ReadRegisters(1, 1, 29, ref regs);
+                        Debug.WriteLine(modbus.modbusStatus);
+                        byte[] result = new byte[regs.Length * 2];
+                        Buffer.BlockCopy(regs, 0, result, 0, result.Length);
+                        var windSpeed = ToFloat(result, 0);
+                        var windDirection = ToFloat(result, 4);
+                        var tof0 = ToFloat(result, 8);
+                        var tof1 = ToFloat(result, 12);
+                        var tof2 = ToFloat(result, 16);
+                        var tof3 = ToFloat(result, 20);
 
-                        //labelTime1.Text = BitConverter.ToInt32(result, 38).ToString();
-                        //labelTime2.Text = BitConverter.ToInt32(result, 42).ToString();
-                        //labelCalibration1.Text = BitConverter.ToInt32(result, 46).ToString();
-                        //labelCalibration2.Text = BitConverter.ToInt32(result, 50).ToString();
-                        //labelClockCount.Text = BitConverter.ToInt32(result, 54).ToString();
+                        var vectorD1 = ToFloat(result, 38);
+                        var vectorD2 = ToFloat(result, 42);
 
-                        //chart1.Series[0].Points.Add(ToFloat(result, 0));
-                        //if (chart1.Series[0].Points.Count > 60) chart1.Series[0].Points.RemoveAt(0);
-                        Random rnd = new Random();
-                        double speed = rnd.NextDouble() * 50;
-                        double direction = rnd.NextDouble() * 360;
-                        test += 1;
+                        labelWindSpeed.Text = windSpeed.ToString("0.00");
+                        labelWindDirection.Text = windDirection.ToString("0.00");
+                        labelTOF0.Text = tof0.ToString();
+                        labelTOF1.Text = tof1.ToString();
+                        labelTOF2.Text = tof2.ToString();
+                        labelTOF3.Text = tof3.ToString();
+                        lblCompasDirection.Text = degToCompass(windDirection);
+
+
+
+                        if(windSpeed > 0.0 && checkBoxLog2File.Checked)
+                        {
+                            using (StreamWriter writetext = new StreamWriter("log.txt", true))
+                            {
+                                writetext.WriteLine(tof0.ToString()
+                                                    + ";" + tof1.ToString()
+                                                    + ";" + tof2.ToString()
+                                                    + ";" + tof3.ToString()
+                                                    + ";" + vectorD1.ToString()
+                                                    + ";" + vectorD2.ToString()
+                                                    + ";" + windSpeed.ToString()
+                                                    + ";" + windDirection.ToString()
+                                                    );
+                            }
+                        }
+
+
                         if (chartWindSpeed.Series[0].Points.Count >= 100)
                         {
                             chartWindSpeed.Series[0].Points.RemoveAt(0);
@@ -391,9 +415,9 @@ namespace WindStation
                         {
                             chartWindDirection.Series[0].Points.RemoveAt(0);
                         }
-                        chartWindSpeed.Series[0].Points.Add(speed);
-                        chartWindDirection.Series[0].Points.AddXY(direction, speed);
-                        chartWindDirection.Series[0].Points.AddXY(direction, 0);
+                        chartWindSpeed.Series[0].Points.Add(windSpeed);
+                        chartWindDirection.Series[0].Points.AddXY(windDirection, windSpeed);
+                        chartWindDirection.Series[0].Points.AddXY(windDirection, 0);
 
                     }
                     break;

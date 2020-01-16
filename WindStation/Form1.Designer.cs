@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPortSettings = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -57,6 +57,23 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tabCalibration = new System.Windows.Forms.TabPage();
             this.tabMeasurements = new System.Windows.Forms.TabPage();
+            this.chartWindDirection = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartWindSpeed = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblCompasDirection = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.labelTOF1 = new System.Windows.Forms.Label();
+            this.labelWindSpeed = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.labelWindDirection = new System.Windows.Forms.Label();
+            this.labelTOF2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.labelTOF0 = new System.Windows.Forms.Label();
+            this.labelTOF3 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabTDC1000 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -121,28 +138,16 @@
             this.checkListBoxConfig2 = new System.Windows.Forms.CheckedListBox();
             this.label67 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.chartWindDirection = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label10 = new System.Windows.Forms.Label();
-            this.labelTOF3 = new System.Windows.Forms.Label();
-            this.labelTOF0 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelTOF2 = new System.Windows.Forms.Label();
-            this.labelWindDirection = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.labelWindSpeed = new System.Windows.Forms.Label();
-            this.labelTOF1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.chartWindSpeed = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.checkBoxLog2File = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPortSettings.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabSettings.SuspendLayout();
             this.tabMeasurements.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartWindDirection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartWindSpeed)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabTDC1000.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -164,10 +169,6 @@
             this.groupBox27.SuspendLayout();
             this.groupBox28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericTOFMeasMode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartWindDirection)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartWindSpeed)).BeginInit();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -197,7 +198,7 @@
             this.tabPortSettings.Location = new System.Drawing.Point(4, 22);
             this.tabPortSettings.Name = "tabPortSettings";
             this.tabPortSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPortSettings.Size = new System.Drawing.Size(643, 500);
+            this.tabPortSettings.Size = new System.Drawing.Size(639, 385);
             this.tabPortSettings.TabIndex = 0;
             this.tabPortSettings.Text = "Port Settings";
             this.tabPortSettings.UseVisualStyleBackColor = true;
@@ -321,7 +322,7 @@
             this.tabSettings.Controls.Add(this.button2);
             this.tabSettings.Location = new System.Drawing.Point(4, 22);
             this.tabSettings.Name = "tabSettings";
-            this.tabSettings.Size = new System.Drawing.Size(643, 500);
+            this.tabSettings.Size = new System.Drawing.Size(639, 385);
             this.tabSettings.TabIndex = 3;
             this.tabSettings.Text = "Sensor Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
@@ -395,7 +396,7 @@
             this.tabCalibration.Location = new System.Drawing.Point(4, 22);
             this.tabCalibration.Name = "tabCalibration";
             this.tabCalibration.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCalibration.Size = new System.Drawing.Size(643, 500);
+            this.tabCalibration.Size = new System.Drawing.Size(639, 385);
             this.tabCalibration.TabIndex = 1;
             this.tabCalibration.Text = "Sensor Calibration";
             this.tabCalibration.UseVisualStyleBackColor = true;
@@ -413,6 +414,197 @@
             this.tabMeasurements.Text = "Measurements";
             this.tabMeasurements.UseVisualStyleBackColor = true;
             this.tabMeasurements.Click += new System.EventHandler(this.tabMeasurements_Click);
+            // 
+            // chartWindDirection
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartWindDirection.ChartAreas.Add(chartArea1);
+            this.chartWindDirection.Location = new System.Drawing.Point(348, 0);
+            this.chartWindDirection.Name = "chartWindDirection";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Polar;
+            series1.Name = "Series1";
+            this.chartWindDirection.Series.Add(series1);
+            this.chartWindDirection.Size = new System.Drawing.Size(291, 222);
+            this.chartWindDirection.TabIndex = 39;
+            this.chartWindDirection.Text = "chartWindDirection";
+            // 
+            // chartWindSpeed
+            // 
+            chartArea2.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea2.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea2.Name = "ChartArea1";
+            this.chartWindSpeed.ChartAreas.Add(chartArea2);
+            legend1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
+            legend1.DockedToChartArea = "ChartArea1";
+            legend1.Name = "Legend1";
+            this.chartWindSpeed.Legends.Add(legend1);
+            this.chartWindSpeed.Location = new System.Drawing.Point(8, 226);
+            this.chartWindSpeed.Name = "chartWindSpeed";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            series2.IsXValueIndexed = true;
+            series2.LabelForeColor = System.Drawing.Color.Bisque;
+            series2.Legend = "Legend1";
+            series2.Name = "Speed";
+            series2.YValuesPerPoint = 6;
+            this.chartWindSpeed.Series.Add(series2);
+            this.chartWindSpeed.Size = new System.Drawing.Size(623, 153);
+            this.chartWindSpeed.TabIndex = 37;
+            this.chartWindSpeed.Text = "Speed";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.checkBoxLog2File);
+            this.groupBox5.Controls.Add(this.lblCompasDirection);
+            this.groupBox5.Controls.Add(this.pictureBox1);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Controls.Add(this.labelTOF1);
+            this.groupBox5.Controls.Add(this.labelWindSpeed);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.labelWindDirection);
+            this.groupBox5.Controls.Add(this.labelTOF2);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.labelTOF0);
+            this.groupBox5.Controls.Add(this.labelTOF3);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Location = new System.Drawing.Point(0, 0);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(340, 222);
+            this.groupBox5.TabIndex = 36;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Wind";
+            // 
+            // lblCompasDirection
+            // 
+            this.lblCompasDirection.AutoSize = true;
+            this.lblCompasDirection.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompasDirection.Location = new System.Drawing.Point(33, 56);
+            this.lblCompasDirection.Name = "lblCompasDirection";
+            this.lblCompasDirection.Size = new System.Drawing.Size(43, 18);
+            this.lblCompasDirection.TabIndex = 36;
+            this.lblCompasDirection.Text = "NNE";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(115, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(202, 194);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Speed:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 33);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Direction:";
+            // 
+            // labelTOF1
+            // 
+            this.labelTOF1.AutoSize = true;
+            this.labelTOF1.Location = new System.Drawing.Point(52, 106);
+            this.labelTOF1.Name = "labelTOF1";
+            this.labelTOF1.Size = new System.Drawing.Size(13, 13);
+            this.labelTOF1.TabIndex = 21;
+            this.labelTOF1.Text = "0";
+            // 
+            // labelWindSpeed
+            // 
+            this.labelWindSpeed.AutoSize = true;
+            this.labelWindSpeed.Location = new System.Drawing.Point(63, 16);
+            this.labelWindSpeed.Name = "labelWindSpeed";
+            this.labelWindSpeed.Size = new System.Drawing.Size(13, 13);
+            this.labelWindSpeed.TabIndex = 11;
+            this.labelWindSpeed.Text = "0";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 106);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 13);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "TOF 1:";
+            // 
+            // labelWindDirection
+            // 
+            this.labelWindDirection.AutoSize = true;
+            this.labelWindDirection.Location = new System.Drawing.Point(64, 33);
+            this.labelWindDirection.Name = "labelWindDirection";
+            this.labelWindDirection.Size = new System.Drawing.Size(13, 13);
+            this.labelWindDirection.TabIndex = 13;
+            this.labelWindDirection.Text = "0";
+            // 
+            // labelTOF2
+            // 
+            this.labelTOF2.AutoSize = true;
+            this.labelTOF2.Location = new System.Drawing.Point(52, 125);
+            this.labelTOF2.Name = "labelTOF2";
+            this.labelTOF2.Size = new System.Drawing.Size(13, 13);
+            this.labelTOF2.TabIndex = 19;
+            this.labelTOF2.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 87);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "TOF 0:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 125);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(40, 13);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "TOF 2:";
+            // 
+            // labelTOF0
+            // 
+            this.labelTOF0.AutoSize = true;
+            this.labelTOF0.Location = new System.Drawing.Point(52, 87);
+            this.labelTOF0.Name = "labelTOF0";
+            this.labelTOF0.Size = new System.Drawing.Size(13, 13);
+            this.labelTOF0.TabIndex = 15;
+            this.labelTOF0.Text = "0";
+            // 
+            // labelTOF3
+            // 
+            this.labelTOF3.AutoSize = true;
+            this.labelTOF3.Location = new System.Drawing.Point(52, 144);
+            this.labelTOF3.Name = "labelTOF3";
+            this.labelTOF3.Size = new System.Drawing.Size(13, 13);
+            this.labelTOF3.TabIndex = 17;
+            this.labelTOF3.Text = "0";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 144);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "TOF 3:";
             // 
             // tabTDC1000
             // 
@@ -1166,195 +1358,15 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // chartWindDirection
+            // checkBoxLog2File
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartWindDirection.ChartAreas.Add(chartArea1);
-            this.chartWindDirection.Location = new System.Drawing.Point(348, 0);
-            this.chartWindDirection.Name = "chartWindDirection";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Polar;
-            series1.Name = "Series1";
-            this.chartWindDirection.Series.Add(series1);
-            this.chartWindDirection.Size = new System.Drawing.Size(291, 222);
-            this.chartWindDirection.TabIndex = 39;
-            this.chartWindDirection.Text = "chartWindDirection";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 178);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "TOF 3:";
-            // 
-            // labelTOF3
-            // 
-            this.labelTOF3.AutoSize = true;
-            this.labelTOF3.Location = new System.Drawing.Point(96, 178);
-            this.labelTOF3.Name = "labelTOF3";
-            this.labelTOF3.Size = new System.Drawing.Size(13, 13);
-            this.labelTOF3.TabIndex = 17;
-            this.labelTOF3.Text = "0";
-            // 
-            // labelTOF0
-            // 
-            this.labelTOF0.AutoSize = true;
-            this.labelTOF0.Location = new System.Drawing.Point(96, 87);
-            this.labelTOF0.Name = "labelTOF0";
-            this.labelTOF0.Size = new System.Drawing.Size(13, 13);
-            this.labelTOF0.TabIndex = 15;
-            this.labelTOF0.Text = "0";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 150);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(40, 13);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "TOF 2:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 87);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "TOF 0:";
-            // 
-            // labelTOF2
-            // 
-            this.labelTOF2.AutoSize = true;
-            this.labelTOF2.Location = new System.Drawing.Point(96, 150);
-            this.labelTOF2.Name = "labelTOF2";
-            this.labelTOF2.Size = new System.Drawing.Size(13, 13);
-            this.labelTOF2.TabIndex = 19;
-            this.labelTOF2.Text = "0";
-            // 
-            // labelWindDirection
-            // 
-            this.labelWindDirection.AutoSize = true;
-            this.labelWindDirection.Location = new System.Drawing.Point(96, 33);
-            this.labelWindDirection.Name = "labelWindDirection";
-            this.labelWindDirection.Size = new System.Drawing.Size(13, 13);
-            this.labelWindDirection.TabIndex = 13;
-            this.labelWindDirection.Text = "0";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 117);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 13);
-            this.label16.TabIndex = 20;
-            this.label16.Text = "TOF 1:";
-            // 
-            // labelWindSpeed
-            // 
-            this.labelWindSpeed.AutoSize = true;
-            this.labelWindSpeed.Location = new System.Drawing.Point(96, 16);
-            this.labelWindSpeed.Name = "labelWindSpeed";
-            this.labelWindSpeed.Size = new System.Drawing.Size(13, 13);
-            this.labelWindSpeed.TabIndex = 11;
-            this.labelWindSpeed.Text = "0";
-            // 
-            // labelTOF1
-            // 
-            this.labelTOF1.AutoSize = true;
-            this.labelTOF1.Location = new System.Drawing.Point(96, 117);
-            this.labelTOF1.Name = "labelTOF1";
-            this.labelTOF1.Size = new System.Drawing.Size(13, 13);
-            this.labelTOF1.TabIndex = 21;
-            this.labelTOF1.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 33);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Direction:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Speed:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(115, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(202, 194);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(33, 56);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(43, 18);
-            this.label18.TabIndex = 36;
-            this.label18.Text = "NNE";
-            // 
-            // chartWindSpeed
-            // 
-            chartArea2.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea2.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea2.Name = "ChartArea1";
-            this.chartWindSpeed.ChartAreas.Add(chartArea2);
-            legend1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
-            legend1.DockedToChartArea = "ChartArea1";
-            legend1.Name = "Legend1";
-            this.chartWindSpeed.Legends.Add(legend1);
-            this.chartWindSpeed.Location = new System.Drawing.Point(8, 226);
-            this.chartWindSpeed.Name = "chartWindSpeed";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            series2.IsXValueIndexed = true;
-            series2.LabelForeColor = System.Drawing.Color.Bisque;
-            series2.Legend = "Legend1";
-            series2.Name = "Speed";
-            series2.YValuesPerPoint = 6;
-            this.chartWindSpeed.Series.Add(series2);
-            this.chartWindSpeed.Size = new System.Drawing.Size(623, 153);
-            this.chartWindSpeed.TabIndex = 37;
-            this.chartWindSpeed.Text = "Speed";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.pictureBox1);
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.labelTOF1);
-            this.groupBox5.Controls.Add(this.labelWindSpeed);
-            this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.labelWindDirection);
-            this.groupBox5.Controls.Add(this.labelTOF2);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.label14);
-            this.groupBox5.Controls.Add(this.labelTOF0);
-            this.groupBox5.Controls.Add(this.labelTOF3);
-            this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Location = new System.Drawing.Point(0, 0);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(340, 222);
-            this.groupBox5.TabIndex = 36;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Wind";
+            this.checkBoxLog2File.AutoSize = true;
+            this.checkBoxLog2File.Location = new System.Drawing.Point(9, 186);
+            this.checkBoxLog2File.Name = "checkBoxLog2File";
+            this.checkBoxLog2File.Size = new System.Drawing.Size(72, 17);
+            this.checkBoxLog2File.TabIndex = 37;
+            this.checkBoxLog2File.Text = "Log to file";
+            this.checkBoxLog2File.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1373,6 +1385,11 @@
             this.tabSettings.ResumeLayout(false);
             this.tabSettings.PerformLayout();
             this.tabMeasurements.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartWindDirection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartWindSpeed)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabTDC1000.ResumeLayout(false);
             this.tabTDC1000.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -1405,11 +1422,6 @@
             this.groupBox28.ResumeLayout(false);
             this.groupBox28.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericTOFMeasMode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartWindDirection)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartWindSpeed)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1504,7 +1516,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartWindDirection;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartWindSpeed;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblCompasDirection;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -1519,6 +1531,7 @@
         private System.Windows.Forms.Label labelTOF3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.CheckBox checkBoxLog2File;
     }
 }
 
